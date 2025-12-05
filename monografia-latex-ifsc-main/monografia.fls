@@ -1,9 +1,9 @@
-PWD /home/jessica/Eng/TCC/monografia-latex-ifsc-main
+PWD /home/jessica/Eng/TCC/tcc/monografia-latex-ifsc-main
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/jessica/Eng/TCC/monografia-latex-ifsc-main/monografia.tex
+INPUT /home/jessica/Eng/TCC/tcc/monografia-latex-ifsc-main/monografia.tex
 OUTPUT monografia.log
 INPUT ./ifscthesis.cls
 INPUT ifscthesis.cls

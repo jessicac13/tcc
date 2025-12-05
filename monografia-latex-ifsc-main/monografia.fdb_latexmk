@@ -1,19 +1,19 @@
 # Fdb version 4
-["biber monografia"] 1764891297.79387 "monografia.bcf" "monografia.bbl" "monografia" 1764898295.13768 0
-  "monografia.bcf" 1764898294.8244 118292 7fcf923fc5ad39ec81fbbdf422624b4a "pdflatex"
+["biber monografia"] 1764891297.79387 "monografia.bcf" "monografia.bbl" "monografia" 1764900526.9457 0
+  "monografia.bcf" 1764900526.61971 118292 7fcf923fc5ad39ec81fbbdf422624b4a "pdflatex"
   "referencias.bib" 1751317570.28397 13623 78afe104d5e3cf8cd46bb52afc5c4a24 ""
   (generated)
   "monografia.bbl"
   "monografia.blg"
   (rewritten before read)
-["cusdep acn acr monografia"] 1764200753.69766 "monografia.acn" "monografia.acr" "monografia" 1764898295.13805 0
-  "monografia.acn" 1764898284.11928 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["cusdep acn acr monografia"] 1764200753.69766 "monografia.acn" "monografia.acr" "monografia" 1764900526.94601 0
+  "monografia.acn" 1764900516.10261 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "monografia.acr"
   (rewritten before read)
-["pdflatex"] 1764898282.38323 "/home/jessica/Eng/TCC/monografia-latex-ifsc-main/monografia.tex" "monografia.pdf" "monografia" 1764898295.13811 0
+["pdflatex"] 1764900514.49328 "/home/jessica/Eng/TCC/tcc/monografia-latex-ifsc-main/monografia.tex" "monografia.pdf" "monografia" 1764900526.94608 0
   "/etc/texmf/web2c/texmf.cnf" 1751041644.54461 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/jessica/Eng/TCC/monografia-latex-ifsc-main/monografia.tex" 1764891235.96136 3494 58556779fc88233adabb2d220f94803f ""
+  "/home/jessica/Eng/TCC/tcc/monografia-latex-ifsc-main/monografia.tex" 1764891235.96136 3494 58556779fc88233adabb2d220f94803f ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1246382020 924 9904cf1d39e9767e7a3622f2a125a565 ""
@@ -316,7 +316,7 @@
   "capitulos/capitulo-01.tex" 1764194460.3786 5602 0f7a287c454d0396f5c762c71e139af4 ""
   "capitulos/capitulo-02.tex" 1764891283.69629 29096 3441b1d01a2ca81c7b1490998ddf9de7 ""
   "capitulos/capitulo-03.tex" 1764204660.51051 2674 5ca47bab15e46585293c278d09c5e4aa ""
-  "capitulos/capitulo-04.tex" 1764898033.06534 31300 d2cbc11a4e7d45ee51010e09a981c84f ""
+  "capitulos/capitulo-04.tex" 1764900500.64746 31298 26de826928d9dd06e0ed07b91e4435e8 ""
   "figuras/GERAL_Accuracy.png" 1763746222.80258 467601 18840f31cbea2c58032908424f7dc397 ""
   "figuras/GERAL_F1_Anormal.png" 1763746225.84707 458337 7fd8005bf7bb4d9ead9f64bd795d3748 ""
   "figuras/GERAL_F1_Macro.png" 1763746227.43412 472749 63875a23f9a7e7e100eb74c48f501112 ""
@@ -352,16 +352,16 @@
   "figuras/ramon.png" 1751297155.57989 15272 1cd17f34e98ffe38b3b46082fe33dd74 ""
   "figuras/sinal.png" 1751051168 44129 77fa2a3a02156bfa72ade104929dd976 ""
   "ifscthesis.cls" 1751051166 16077 85c37c88fffe2b126f86a0e61dba8acf ""
-  "monografia.acn" 1764898284.11928 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "monografia.acr" 1764898283.97728 0 d41d8cd98f00b204e9800998ecf8427e "cusdep acn acr monografia"
-  "monografia.aux" 1764898294.8024 37932 f64d5060cb2d4d9137f17dceb6d1acb3 "pdflatex"
+  "monografia.acn" 1764900516.10261 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "monografia.acr" 1764900515.96561 0 d41d8cd98f00b204e9800998ecf8427e "cusdep acn acr monografia"
+  "monografia.aux" 1764900526.59871 37932 c88effb8e5204ffa1ed8d4771a5511b9 "pdflatex"
   "monografia.bbl" 1764891299.50262 55636 591f501c4d6fd6909dd89a50b0b375cd "biber monografia"
-  "monografia.lof" 1764898294.82663 3801 943b8b2e3cbbeef9589503dca6766932 "pdflatex"
-  "monografia.run.xml" 1764898294.82663 2553 48184744a52cacdbdb7ac6bc333519db "pdflatex"
-  "monografia.slo" 1764898284.12028 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "monografia.sls" 1764898284.11728 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "monografia.lof" 1764900526.62246 3801 943b8b2e3cbbeef9589503dca6766932 "pdflatex"
+  "monografia.run.xml" 1764900526.62246 2553 48184744a52cacdbdb7ac6bc333519db "pdflatex"
+  "monografia.slo" 1764900516.10261 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "monografia.sls" 1764900516.09961 0 d41d8cd98f00b204e9800998ecf8427e ""
   "monografia.tex" 1764891235.96136 3494 58556779fc88233adabb2d220f94803f ""
-  "monografia.toc" 1764898294.82663 3866 7893fe24aee4689476e876962c58a8f8 "pdflatex"
+  "monografia.toc" 1764900526.62246 3866 7893fe24aee4689476e876962c58a8f8 "pdflatex"
   "pretextuais/abreviacoes-siglas.tex" 1751051166 1522 f310fbd547cfa8bd9916582a972bd0ac ""
   "pretextuais/agradecimentos.tex" 1763763072.6389 1467 9ff5f5f48e75afa2434b74c844f39812 ""
   "pretextuais/capa.tex" 1763763223.826 1282 c80475bf93b389d4787f5b3487f5a7cb ""
