@@ -1,0 +1,16 @@
+\chapter{Estado da arte}\label{cap:revisao}
+
+A integração entre redes neurais convolucionais (CNNs) e transformadas \textit{Wavelet} tem demonstrado eficácia significativa na análise de mamografias, especialmente para identificação de lesões sutis como microcalcificações e distorções arquiteturais \cite{blahova2025neural,oyelade2022novel}. Essa abordagem extrai características multiescala que amplificam padrões relevantes para o diagnóstico precoce do câncer de mama \cite{oyelade2022novel}.
+
+Técnicas tradicionais de aumento de dados, como rotação e espelhamento, equilibram classes raras (ex.: distorções arquiteturais), reduzindo falsos positivos em até 12\% e melhorando a sensibilidade para microcalcificações em 9,3\%. Essa estratégia mitiga desequilíbrios amostrais e aprimora a generalização dos modelos \cite{blahova2025neural}
+
+Com a base de dados \textit{Mini-MIAS}, a aplicação de \textit{Wavelets Haar} como pré-processa-mento em arquiteturas \textit{ResNet}/VGG alcançou 98,5\% de acurácia na detecção de nódulos malignos, isolando padrões de alta frequência em bordas irregulares \cite{rasheed2021use}. Complementarmente, redes híbridas que combinam \textit{Wavelet} e \textit{CNN} melhoraram a discriminação de microcalcificações em tecidos densos, atingindo acurácia de 85\% com \textit{EfficientNet}, 80,9\% com \textit{ResNet101} e 83,4\% com \textit{AmoebaNet-C} \cite{banerjee2024introductory}.
+
+Com a base de dados \textit{CBIS-DDSM}, modelos \textit{Wavelet-CNN} atingiram 87,2\% de acurácia na identificação de distorções arquiteturais e microcalcificações, com sensibilidade de 85,4\% \cite{oyelade2022novel}. Em comparação com abordagens anteriores, a superioridade da integração \textit{Wavelet-CNN} é evidenciada em comparações diretas:
+
+\textcite{oyelade2022novel} superaram métodos como CNN-DW (\textcite{jadoon2017three}: 81,83\% de acurácia) e \textit{CNN} tradicional (\textcite{teare2017malignancy}: 85–88\%), alcançando 87,2\% de acurácia e AUC 0,96 no \textit{CBIS-DDSM}.
+
+Embora Bakkour e Afdel (2017) tenham reportado 97,28\% de acurácia com aumento de dados, sua abordagem não incorporou transformadas \textit{Wavelet}, limitando a extração de características multiescala \cite{oyelade2022novel}.
+
+Assim, essa combinação entre CNNs e transformadas wavelet representa uma abordagem consolidada na análise de mamografias, evidenciando ganhos quantificáveis na detecção de lesões sutis e na redução de falsos positivos. Esses avanços estabelecem as bases para a exploração de arquiteturas otimizadas e estratégias de pré-processamento desta pesquisa.
+

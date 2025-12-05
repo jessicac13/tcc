@@ -1,0 +1,33 @@
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Mamografia digital demonstrando nódulo espiculado avaliado com recursos de pós-processamento}}{12}{figure.caption.9}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Representação anatômica e radiológica da mama}}{13}{figure.caption.10}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Classificação das densidades mamárias (A a D) segundo o sistema BI-RADS}}{14}{figure.caption.11}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Sinal no domínio do tempo com mudança de frequência}}{15}{figure.caption.12}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Transformada Rápida de \textit {Fourier} do sinal: ausência de localização temporal}}{16}{figure.caption.13}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Espectrograma da Transformada \textit {Wavelet} Contínua: análise tempo-frequência}}{16}{figure.caption.14}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Funções \textit {wavelets} comuns}}{17}{figure.caption.16}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Representação em diagrama de blocos da FWT}}{19}{figure.caption.20}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Arquitetura de uma Rede Neural Convolucional}}{21}{figure.caption.22}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Modelo matemático de um neurônio}}{22}{figure.caption.23}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Fronteira de separação do neurônio de entrada}}{23}{figure.caption.24}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Topologias de Rede Neural}}{23}{figure.caption.25}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Rede neural profunda}}{24}{figure.caption.27}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Exemplo de convolução 2D}}{25}{figure.caption.28}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Exemplo de \textit {pooling}}}{25}{figure.caption.29}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Etapas do processo de Aprendizado de Máquina Centrado no Ser Humano (HCML)}}{29}{figure.caption.30}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Exemplos das primeiras imagens do conjunto Mini-MIAS}}{30}{figure.caption.32}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Exemplo de comparação visual entre a imagem original e a imagem préprocessada}}{33}{figure.caption.37}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Acurácia para todas as arquiteturas}}{38}{figure.caption.47}%
+\contentsline {figure}{\numberline {20}{\ignorespaces F1-score - Classe Normal}}{39}{figure.caption.48}%
+\contentsline {figure}{\numberline {21}{\ignorespaces F1-score - Classe Anormal}}{39}{figure.caption.49}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Precisão - Classe Normal}}{40}{figure.caption.50}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Precisão - Classe Anormal}}{40}{figure.caption.51}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Recall - Classe Normal}}{41}{figure.caption.52}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Recall - Classe Anormal}}{41}{figure.caption.53}%
+\contentsline {figure}{\numberline {26}{\ignorespaces F1-score - Macro}}{42}{figure.caption.54}%
+\contentsline {figure}{\numberline {27}{\ignorespaces F1-score - Ponderado}}{42}{figure.caption.55}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Recall - Macro}}{43}{figure.caption.56}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Recall - Ponderado}}{43}{figure.caption.57}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Precisão - Macro.}}{44}{figure.caption.58}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Precisão - Ponderado}}{44}{figure.caption.59}%

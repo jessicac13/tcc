@@ -1,0 +1,25 @@
+% ajusta o espaçamento dos parágrafos do resumo
+\setlength{\absparsep}{18pt} 
+
+
+\begin{resumo}
+
+O câncer de mama permanece como uma das principais causas de mortalidade entre mulheres no mundo, sendo a detecção precoce essencial para aumentar as chances de tratamento eficaz. Nesse contexto, este trabalho propõe o desenvolvimento e a comparação de algoritmos para detecção automática de nódulos mamários em mamografias, integrando técnicas de pré-processamento baseadas na Transformada \textit{Wavelet} e redes neurais convolucionais (\textit{CNNs}), treinadas tanto do zero quanto com \textit{Transfer Learning}. As imagens utilizadas provêm da base pública \textit{Mini-MIAS}. O desempenho dos modelos é avaliado em diferentes cenários, com e sem a aplicação da \textit{Wavelet} e com o uso de \textit{data augmentation}, utilizando métricas como acurácia, precisão, recall e F1-score. Os resultados mostram que o pré-processamento baseado na família \textit{Coiflet} exerce maior impacto no desempenho do que a \textit{data augmentation} isolada, reduzindo o desequilíbrio entre as classes e melhorando a identificação de padrões relevantes. Entre as arquiteturas avaliadas, os modelos \textit{ResNet} apresentaram desempenho mais consistente, com destaque para a \textit{ResNet}34 combinada com o pré-processamento \textit{Coiflet}, que obteve os melhores resultados gerais.
+  
+Palavras-chave: Câncer de mama. Redes neurais convolucionais. Transformada
+\textit{Wavelet}. Reconhecimento de padrões. Inteligência artificial
+\end{resumo}
+
+
+
+%-----------------------------------------------%
+\begin{resumo}[Abstract]
+\begin{otherlanguage*}{english}
+    Breast cancer remains one of the leading causes of mortality among women worldwide, and early detection is essential to improving the chances of effective treatment. In this context, this work proposes the development and comparison of algorithms for the automatic detection of breast nodules in mammograms, integrating preprocessing techniques based on the Wavelet Transform and convolutional neural networks (CNNs), trained both from scratch and using Transfer Learning. The images used come from the public Mini-MIAS database. Model performance is evaluated under different scenarios, with and without the application of the Wavelet transform and with the use of data augmentation, using metrics such as accuracy, precision, recall, and F1-score. The results show that preprocessing based on the Coiflet family has a greater impact on performance than data augmentation alone, reducing class imbalance and improving the identification of relevant patterns. Among the evaluated architectures, the ResNet models presented the most consistent performance, with ResNet34 combined with Coiflet-based preprocessing achieving the best overall results.
+\vspace{\onelineskip}
+
+\noindent 
+Keywords: Breast cancer. Convolutional neural networks. \textit{Wavelet} transform. Pattern recognition. Artificial intelligence.
+\end{otherlanguage*}
+\end{resumo}
+%-----------------------------------------------%

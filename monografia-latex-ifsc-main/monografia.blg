@@ -1,0 +1,21 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[1] Config.pm:310> INFO - Logfile is 'monografia.blg'
+[112] biber:340> INFO - === qui dez  4, 2025, 20:34:58
+[151] Biber.pm:419> INFO - Reading 'monografia.bcf'
+[257] Biber.pm:979> INFO - Found 31 citekeys in bib section 0
+[272] Biber.pm:4419> INFO - Processing section 0
+[291] Biber.pm:4610> INFO - Looking for bibtex file 'referencias.bib' for section 0
+[293] bibtex.pm:1713> INFO - LaTeX decoding ...
+[337] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
+[633] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[633] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[633] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'pt-BR'
+[633] Biber.pm:4245> INFO - No sort tailoring available for locale 'pt-BR'
+[679] bbl.pm:660> INFO - Writing 'monografia.bbl' with encoding 'UTF-8'
+[695] bbl.pm:763> INFO - Output to monografia.bbl
+[695] Biber.pm:131> WARN - legacy month field 'Jun.' in entry 'Bravo_Lopes_Tijolin_Nunes_Lenhani_Junior_Ceranto_2021' is not an integer - this will probably not sort properly.
+[695] Biber.pm:131> WARN - ISBN '978-0-471-25578-1' in entry 'Goswami1999' is invalid - run biber with '--validate_datamodel' for details.
+[695] Biber.pm:131> WARN - legacy year field 'n.d.' in entry 'very_neural_network' is not an integer - this will probably not sort properly.
+[695] Biber.pm:131> WARN - legacy month field 'sep' in entry 'martins2024exploring' is not an integer - this will probably not sort properly.
+[695] Biber.pm:131> WARN - I didn't find a database entry for 'https://www.kaggle.com/datasets/kmader/mias-mammography' (section 0)
+[695] Biber.pm:133> INFO - WARNINGS: 5

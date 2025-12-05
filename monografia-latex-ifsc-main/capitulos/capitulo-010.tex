@@ -1,0 +1,250 @@
+\chapter{Conclusões}\label{cap:conclusoes}
+
+Este trabalho procurou mostrar como deverá ser a apresentação da monografia a ser submetida à Coordenação do Curso de Engenharia de Telecomunicações do IFSC para a obtenção do diploma de Bacharel em Engenharia de Telecomunicações.
+
+No \autoref{cap:introducao} foi feita uma pequena introdução. No \autoref{cap:revisao} foi apresentado o uso de alguns ambientes flutuantes no~\LaTeX~. E no \autoref{cap:proposta} foi apresentado sobre equações e como inserir trechos de código.
+
+Como trabalho futuro, fica a reescrita do texto deste documento de forma que ele possam indicar informações específicas a formatação do documento. Como o tamanho da fonte utilizada, o espaçamento da borda, o alinhamento e numeração das seções e capítulos etc.
+
+\chapter{Proposta}\label{cap:proposta}
+
+
+\section{Incluindo trechos de códigos}\label{sec:codigos}
+
+Em alguns casos é desejado incluir trechos de códigos no documento. O \LaTeX~oferece inúmeras maneiras para isto e o pacote \textbf{listings} é conhecido por apresentar um dos melhores resultados. A \autoref{cod:olamundo} apresenta o código em \textit{shell script} para o complexo problema do ``Olá mundo!''. A \autoref{cod:matlab} apresenta um trecho de código em MatLab e por fim, na \autoref{cod:pessoa} é ilustrado um aluno representado em um documento JSON.
+
+\lstinputlisting[language=csh,caption={Olá mundo em shell script},label=cod:olamundo]{codigos/ola.sh}
+
+\lstinputlisting[language=matlab,caption={Um pequeno código em MatLab},label=cod:matlab]{codigos/matlab.m}
+
+\lstinputlisting[language=json,caption={Aluno representado em JSON},label=cod:pessoa]{codigos/pessoa.json}
+
+
+\section{Como apresentar equações}\label{sec:equacoes}
+
+O \LaTeX é um pacote feito para a preparação de textos impressos de alta qualidade, especialmente
+para textos matemáticos. Ele foi desenvolvido por Leslie Lamport a partir do programa~\TeX~criado por Donald Knuth.
+
+Fórmulas matemáticas são produzidas diretamente no arquivo fonte texto. Isto significa que o~\LaTeX~deve ser informado que o texto que vem a seguir é uma fórmula e também quando ela termina e o texto normal recomeça. As fórmulas podem ocorrer em uma linha de texto como $ ax^2 + bx + c = 0 $, ou destacada do texto principal como os exemplos apresentados na \autoref{e_c2_eq1} e \autoref{e_c2_eq2}.
+
+\begin{equation}
+ x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+\label{e_c2_eq1}
+\end{equation}
+
+\begin{align}
+f(x) &= x^2 \nonumber\\
+g(x) &= \dfrac{1}{\sqrt{x}} \nonumber\\
+F(x) &= \int^a_b \frac{1}{3}x^3
+\label{e_c2_eq2}
+\end{align}
+
+
+\section{Usando siglas, abreviaturas e símbolos}
+
+Algumas vezes nos deparamos com textos cheios de siglas ou símbolos. Existem diversos pacotes e formas para gerar glossário, lista de acrônimos, lista de símbolos etc. com \LaTeX. Neste parágrafo é feito uso de comandos definidos no pacote \textit{glossaries-extra}\footnote{\url{https://www.ctan.org/pkg/glossaries-extra}}. A listagem de acrônimos fica dentro do arquivo \texttt{pretextuais/abreviacoes-siglas.tex} e a listagem de símbolos fica dentro do arquivo \texttt{pretextuais/simbolos.tex}.
+
+O símbolo \gls{emptyset} representa um conjunto vazio, já o símbolo \gls{pi} representa o número Pi. O protocolo \gls{TLS} deve ser empregado sempre que se deseja garantir a integridade e a confidencialidade das mensagens trocadas pela rede. O \gls{TLS} é hoje utilizado por diversas aplicações. Como faz tempo que eu não falo do \glsxtrfull{TLS} eu chamo o nome completo mais a sigla, ajudando o meu leitor a lembrar da sigla \glsxtrshort{TLS}. Existem as \glsxtrfullpl{AC} que são bem importante. Este documento segue as normas da \gls{ABNT} e para isso faz uso do pacote \gls{abnTeX}.
+
+Abaixo são apresentados os comandos providos pelo pacote \textit{glossaries-extra}:
+
+\begin{itemize}
+    \item \verb+\gls{rotulo}+ -- Na primeira vez que o acrônimo for chamado será impresso o valor por extenso e o acrônimo. Ex: \verb+\gls{IFSC}+ irá imprimir Instituto Federal de Santa Catarina (IFSC). Nas demais vezes irá imprimir somente o acrônimo;
+    \item \verb+\glspl{rotulo}+ -- Semelhante ao anterior, mas imprime a forma no plural;
+    \item \verb+\glsxtrshort{rotulo}+ -- Para imprimir somente o acrônimo;
+    \item \verb+\glsxtrlong{rotulo}+ -- Para imprimir somente o valor por extenso;
+    \item \verb+\glsxtrfull{rotulo}+ -- Para imprimir o valor por extenso e o acrônimo, mesmo que o acrônimo já tenha sido invocado previamente.
+\end{itemize}
+
+
+
+\section{Referências bibliográficas}\label{sec:referencias}
+
+A formatação das referências bibliográficas conforme as regras da ABNT são um dos principais objetivos do \abnTeX. Consulte os manuais \textcite{abntex2cite} e \textcite{abntex2cite-alf} para obter informações sobre como utilizar as referências bibliográficas.
+
+
+O uso de citações ao londo do texto é uma prática desejável. Por exemplo, em \cite{lamport94} é apresentado um documento sobre a preparação de textos usando \LaTeX. Já em \cite{goossens94} é apresentada uma lista de referências rápidas para realizar as mais simples tarefas em \LaTeX.
+
+É o caso em que você menciona \emph{explicitamente} o autor da referência na sentença, algo
+do tipo ``Fulano (1900)''. Neste caso o nome do autor é escrito
+normalmente. Para isso use o comando \verb+\textcite+.
+
+A ironia será assim uma \ldots\ proposta  por \textcite{lamport94}. Este documento segue as normas da ABNT e para isso faz uso do pacote abnTeX.
+
+
+% ---
+\section{Citações diretas}
+\label{sec-citacao}
+% ---
+
+\index{citações!diretas}Utilize o ambiente \texttt{citacao} para incluir
+citações diretas com mais de três linhas:
+
+\begin{citacao}
+As citações diretas, no texto, com mais de três linhas, devem ser
+destacadas com recuo de 4 cm da margem esquerda, com letra menor que a do texto
+utilizado e sem as aspas. No caso de documentos datilografados, deve-se
+observar apenas o recuo \cite[5.3]{NBR10520:2002}.
+\end{citacao}
+
+Use o ambiente assim:
+
+\begin{verbatim}
+\begin{citacao}
+As citações diretas, no texto, com mais de três linhas [\ldots] 
+deve-se observar apenas o recuo \cite[5.3]{NBR10520:2002}.
+\end{citacao}
+\end{verbatim}
+
+O ambiente \texttt{citacao} pode receber como parâmetro opcional um nome de
+idioma previamente carregado nas opções da classe. Nesse
+caso, o texto da citação é automaticamente escrito em itálico e a hifenização é
+ajustada para o idioma selecionado na opção do ambiente. Por exemplo:
+
+\begin{verbatim}
+\begin{citacao}[english]
+Text in English language in italic with correct hyphenation.
+\end{citacao}
+\end{verbatim}
+
+Tem como resultado:
+
+\begin{citacao}[english]
+Text in English language in italic with correct hyphenation.
+\end{citacao}
+
+\index{citações!simples}Citações simples, com até três linhas, devem ser
+incluídas com aspas. Observe que em \LaTeX as aspas iniciais são diferentes das
+finais: ``Amor é fogo que arde sem se ver''.
+
+\section{Quadros}\label{sec:quadros}
+
+Um quadro é formado por linhas horizontais e verticais, sendo fechado em todas as suas extremidades e, geralmente, é utilizado para expressar dados qualitativos. Verifique um exemplo de utilização no \autoref{quadro:exemplo}.
+
+
+\begin{quadro}[htb]
+\caption{Exemplo de quadro}\label{quadro:exemplo}
+\begin{tabular}{|l|r|r|r|}
+    \hline
+    \textbf{Pessoa} & \textbf{Idade} & \textbf{Peso} & \textbf{Altura} \\ \hline
+    Marcos & 26    & 68   & 178    \\ \hline
+    Ivone  & 22    & 57   & 162    \\ \hline
+    ...    & ...   & ...  & ...    \\ \hline
+    Sueli  & 40    & 65   & 153    \\ \hline
+\end{tabular}
+\fonteproprioautor
+\end{quadro}
+
+No \autoref{quadro:docentes} são listados os docentes do curso.
+
+\begin{quadro}[htb]
+    \centering
+    \caption{Listagem dos docentes do curso}\label{quadro:docentes}
+    \footnotesize
+    \begin{tabular}{|l|l|l|}
+    \hline
+    \textbf{Docente} & \textbf{Formação acadêmica}    & \textbf{UCs}                               \\ \hline
+    Fulano de tal    & Engenharia de Telecomunicações & Antenas, Radiotransmissão, Circuitos de RF \\ \hline
+    Nononono         & Ciências da Computação         & Programação, Sistemas Distribuídos         \\ \hline
+    Sicrano          & Engenharia Elétrica            & Análise de Circuitos, Sinais e Sistemas    \\ \hline
+    \end{tabular}
+    \fonteproprioautor
+\end{quadro}
+
+
+\section{Tabelas}\label{sec:tabelas}
+
+De acordo com \textcite{ibge1993}, tabelas são ilustrações com dados estatísticos numéricos. A moldura de uma tabela não deve ter traços verticais que a delimitem à esquerda e à direita. Quando houver necessidade de se destacar parte do cabeçalho ou parte dos dados numéricos estes devem ser estruturados com um ou mais traços verticais paralelos adicionais. Linhas horizontais só se admitem no cabeçalho e no rodapé. 
+
+Tabelas não devem figurar dados em branco. Assim, em um tabela:
+
+\begin{itemize}
+    \item Traço indica dado inexistente;
+    \item Reticências indicam dado desconhecido;
+    \item Zero deve ser usado quando o dado for menor que a metade da unidade adotada para a expressão do dado.
+\end{itemize}
+
+As tabelas devem ser citadas no texto, inseridas o mais próximo possível do trecho a que se referem e padronizadas segundo as Normas de Apresentação Tabular do IBGE. Os números sempre devem ser alinhados à direita, veja um exemplo na \autoref{tab:publicacoes}.
+
+\begin{table}[htb]
+    \ABNTEXfontereduzida
+    \centering
+    \caption{Produção dos docentes do curso}
+    \label{tab:publicacoes}
+    \begin{tabular}{p{3.3cm} r r R{2cm}}\toprule
+        Produto científico & \multicolumn{2}{c}{Período} &  \\ \cmidrule{2-3}
+                   & 2000-2010 & 2010-2020 & Total \\ \midrule
+        Artigo nacional & 10 & 20 & 30 \\ 
+        Artigo internacional & 5 & 5 & 10 \\
+        Orientações de TCC & 30 & 40 & 70 \\ \midrule 
+        Total & 45 & 65 & 110 \\
+
+        \bottomrule
+    \end{tabular}
+
+    % Comando para adicionar a fonte de elaboração do autor
+    \fonteproprioautor
+
+\end{table}
+
+
+
+\section{Figuras}\label{sec:figuras}
+
+As figuras são bastante úteis para ajudar expressar o funcionamento, modelo, etc. de alguma parte de seu trabalho. O \textit{Inkscape}\footnote{\url{https://inkscape.org/pt-br}.} é um \textit{software} livre para criação de desenhos vetoriais e que permite exportar os desenhos para os formatos PDF, PNG etc. O \textit{site} \url{https://diagrams.net} também uma boa opção para criar figuras.
+
+A inclusão de figuras no texto necessita que algumas regras sejam atendidas. São essas:
+
+\begin{itemize}
+	\item As figuras deverão ser de alta qualidade;
+	\begin{itemize}
+		\item Evite colocar fotos e outras figuras complexas;
+		\item Opte por figuras simples e que realmente expressem algo, mesmo quando impressas em preto e branco;
+	\end{itemize}
+	\item Em \LaTeX~as figuras deverão estar nos formatos: \texttt{PDF}, \texttt{JPG} ou \texttt{PNG};
+	\item Toda figura deverá possuir uma legenda;
+	\item Toda figura deverá ser referenciada em alguma parte do texto.
+\end{itemize}
+
+A \autoref{fig:escrita} foi inserida no texto para mostrar como fazer tal inserção em \LaTeX. Vale lembrar que toda figura inserida deverá ser, em algum momento, referenciada no texto. 
+
+\begin{figure}[ht]
+	\centering
+	\caption{Uma pessoa escrevendo sua monografia}\label{fig:escrita}
+	\includegraphics[width=5cm]{figuras/man}
+    \fonte{\textcite{openclipart}}
+\end{figure}
+
+
+\subsection{Mascotes}\label{sec:mascotes}
+
+
+A \autoref{fig:mascotes} ilustra uma forma de incluir duas figuras, lado a lado, usando o pacote \texttt{subcaption}. A \autoref{fig:mascote1} ilustra o mascote do \LaTeX~estudando. Já na \autoref{fig:mascote2} o mascote aparece apresentando algum assunto. 
+
+\begin{figure}[ht]
+	\centering
+	\caption{O mascote do~\LaTeX~em diferentes poses}\label{fig:mascotes}
+
+	\begin{subfigure}[t]{.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/lion.pdf}
+        \caption{O mascote estudando}\label{fig:mascote1}
+    \end{subfigure}
+    \begin{subfigure}[t]{.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/latex_lion.pdf}
+        \caption{O mascote ensinando}\label{fig:mascote2}
+    \end{subfigure}
+\end{figure}
+
+\subsubsection{Seção quaternária}\label{sec:quaternaria}
+
+\lipsum[1]
+
+\subsubsection{Outra seção quaternária}\label{sec:quaternariaoutra}
+
+\lipsum[1]
+
+\subsubsubsection{Seção quinária}\label{sec:quinaria}
+
+

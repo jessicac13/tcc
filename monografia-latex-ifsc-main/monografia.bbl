@@ -1,0 +1,1310 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{aguiar2017}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=59221c6ea4a46ff19f2dfced17e648af}{%
+           family={Aguiar\bibnamedelima Neto},
+           familyi={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+           given={Décio\bibnamedelima Gonçalves},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+      }
+      \list{institution}{1}{%
+        {Universidade Federal do Ceará, Campus Quixadá}%
+      }
+      \list{location}{1}{%
+        {Quixadá, Brasil}%
+      }
+      \strng{namehash}{59221c6ea4a46ff19f2dfced17e648af}
+      \strng{fullhash}{59221c6ea4a46ff19f2dfced17e648af}
+      \strng{bibnamehash}{59221c6ea4a46ff19f2dfced17e648af}
+      \strng{authorbibnamehash}{59221c6ea4a46ff19f2dfced17e648af}
+      \strng{authornamehash}{59221c6ea4a46ff19f2dfced17e648af}
+      \strng{authorfullhash}{59221c6ea4a46ff19f2dfced17e648af}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Orientador: Prof. Dr. Paulo de Tarso Guerra Oliveira}
+      \field{title}{Transferência de conhecimento utilizando aprendizado profundo para classificação de imagens histopatológicas}
+      \field{type}{Trabalho de Conclusão de Curso (Graduação)}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://repositorio.ufc.br/bitstream/riufc/29515/1/2017_tcc_dganaguiar.pdf
+      \endverb
+      \verb{url}
+      \verb https://repositorio.ufc.br/bitstream/riufc/29515/1/2017_tcc_dganaguiar.pdf
+      \endverb
+    \endentry
+    \entry{banerjee2024introductory}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f8a65a18aa71b5a9b2bf1d933a945db6}{%
+           family={Banerjee},
+           familyi={B\bibinitperiod},
+           given={Sheekar},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=606d9e9156399cdc481a35080ed183fc}{%
+           family={Kabir},
+           familyi={K\bibinitperiod},
+           given={Humayun},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{58f7c7bd4bb17c4cfeec6f0699698b6b}
+      \strng{fullhash}{58f7c7bd4bb17c4cfeec6f0699698b6b}
+      \strng{bibnamehash}{58f7c7bd4bb17c4cfeec6f0699698b6b}
+      \strng{authorbibnamehash}{58f7c7bd4bb17c4cfeec6f0699698b6b}
+      \strng{authornamehash}{58f7c7bd4bb17c4cfeec6f0699698b6b}
+      \strng{authorfullhash}{58f7c7bd4bb17c4cfeec6f0699698b6b}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cold Spring Harbor Laboratory}
+      \field{note}{Preprint}
+      \field{title}{An introductory implementation of breast cancer detection from mammograms and pixel intensity with Efficient-Net and other neural nets}
+      \field{urlday}{28}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1101/2024.05.04.592536
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1101/2024.05.04.592536
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1101/2024.05.04.592536
+      \endverb
+    \endentry
+    \entry{blahova2025neural}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=827211f265114bab357f0239d889e709}{%
+           family={Blahová},
+           familyi={B\bibinitperiod},
+           given={Lenka},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9c594f52314df92df919f947463a0e3b}{%
+           family={Kostolný},
+           familyi={K\bibinitperiod},
+           given={Jakub},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0a11afd91cf05f6a0d00a89b5a52838d}{%
+           family={Cimrák},
+           familyi={C\bibinitperiod},
+           given={Ivan},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fa42350ce48b791e4a4bd2d3b4331583}
+      \strng{fullhash}{fa42350ce48b791e4a4bd2d3b4331583}
+      \strng{bibnamehash}{fa42350ce48b791e4a4bd2d3b4331583}
+      \strng{authorbibnamehash}{fa42350ce48b791e4a4bd2d3b4331583}
+      \strng{authornamehash}{fa42350ce48b791e4a4bd2d3b4331583}
+      \strng{authorfullhash}{fa42350ce48b791e4a4bd2d3b4331583}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bioengineering}
+      \field{title}{Neural network-based mammography analysis: augmentation techniques for enhanced cancer diagnosis — a review}
+      \field{urlday}{28}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{volume}{12}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \field{pages}{232}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/bioengineering12030232
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.3390/bioengineering12030232
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.3390/bioengineering12030232
+      \endverb
+    \endentry
+    \entry{Bravo_Lopes_Tijolin_Nunes_Lenhani_Junior_Ceranto_2021}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=4ddd4b45b2a14a4e4b53a1e053268465}{%
+           family={Bravo},
+           familyi={B\bibinitperiod},
+           given={Barbara\bibnamedelima Silva},
+           giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b368c905080c7cec0c4c3cacfb254d5a}{%
+           family={Lopes},
+           familyi={L\bibinitperiod},
+           given={Ana\bibnamedelimb Beatriz\bibnamedelima Barbosa},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cf73ba18b434827aadfbbc52716d7005}{%
+           family={Tijolin},
+           familyi={T\bibinitperiod},
+           given={Maria\bibnamedelima Beatriz},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=63c9a804f93d763770ba223c6f625f33}{%
+           family={Nunes},
+           familyi={N\bibinitperiod},
+           given={Priscila\bibnamedelimb Luzia\bibnamedelima Pereira},
+           giveni={P\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=36115e039e5ef7504739e4a3aabeee62}{%
+           family={Lenhani},
+           familyi={L\bibinitperiod},
+           given={Thalia},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bfbbf5fec1a2a150752af7e5b19ac1e2}{%
+           family={Junior},
+           familyi={J\bibinitperiod},
+           given={Silvano\bibnamedelimb Farias\bibnamedelima Dias},
+           giveni={S\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4532653d104f9736cce2d35f12a131e5}{%
+           family={Ceranto},
+           familyi={C\bibinitperiod},
+           given={Daniela\bibnamedelimb de\bibnamedelimb Cassia\bibnamedelimb Faglioni\bibnamedelima Boleta},
+           giveni={D\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d41b63ddb3d65d4de4f7d79fe3421f49}
+      \strng{fullhash}{aedd1eebe33ec8f7e97901dfe796b986}
+      \strng{bibnamehash}{d41b63ddb3d65d4de4f7d79fe3421f49}
+      \strng{authorbibnamehash}{d41b63ddb3d65d4de4f7d79fe3421f49}
+      \strng{authornamehash}{d41b63ddb3d65d4de4f7d79fe3421f49}
+      \strng{authorfullhash}{aedd1eebe33ec8f7e97901dfe796b986}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Brazilian Journal of Health Review}
+      \field{month}{6}
+      \field{number}{3}
+      \field{title}{Câncer de mama: uma revisão de literatura/ Breast cancer: a literature review}
+      \field{volume}{4}
+      \field{year}{2021}
+      \field{pages}{14254\bibrangedash 14264}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.34119/bjhrv4n3-357
+      \endverb
+      \verb{urlraw}
+      \verb https://ojs.brazilianjournals.com.br/ojs/index.php/BJHR/article/view/32101
+      \endverb
+      \verb{url}
+      \verb https://ojs.brazilianjournals.com.br/ojs/index.php/BJHR/article/view/32101
+      \endverb
+    \endentry
+    \entry{cadrin2023unleashing}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2ff9a1e3e299cf3fbd3cee3059ba4ab4}{%
+           family={Cadrin-Chênevert},
+           familyi={C\bibinithyphendelim C\bibinitperiod},
+           given={Alexandre},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2ff9a1e3e299cf3fbd3cee3059ba4ab4}
+      \strng{fullhash}{2ff9a1e3e299cf3fbd3cee3059ba4ab4}
+      \strng{bibnamehash}{2ff9a1e3e299cf3fbd3cee3059ba4ab4}
+      \strng{authorbibnamehash}{2ff9a1e3e299cf3fbd3cee3059ba4ab4}
+      \strng{authornamehash}{2ff9a1e3e299cf3fbd3cee3059ba4ab4}
+      \strng{authorfullhash}{2ff9a1e3e299cf3fbd3cee3059ba4ab4}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Radiology: Artificial Intelligence}
+      \field{number}{2}
+      \field{title}{Unleashing the Power of Deep Learning for Breast Cancer Detection through Open Mammography Datasets}
+      \field{volume}{5}
+      \field{year}{2023}
+      \field{pages}{e220294}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1148/ryai.220294
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1148/ryai.220294
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1148/ryai.220294
+      \endverb
+    \endentry
+    \entry{Cunha2020}{bachelorsthesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=39ed17704db2d752edd5e6c5452add2a}{%
+           family={Cunha},
+           familyi={C\bibinitperiod},
+           given={Leonardo\bibnamedelimb Cardoso\bibnamedelima da},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim d\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Universidade Federal de Ouro Preto, Escola de Minas}%
+      }
+      \strng{namehash}{39ed17704db2d752edd5e6c5452add2a}
+      \strng{fullhash}{39ed17704db2d752edd5e6c5452add2a}
+      \strng{bibnamehash}{39ed17704db2d752edd5e6c5452add2a}
+      \strng{authorbibnamehash}{39ed17704db2d752edd5e6c5452add2a}
+      \strng{authornamehash}{39ed17704db2d752edd5e6c5452add2a}
+      \strng{authorfullhash}{39ed17704db2d752edd5e6c5452add2a}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Redes neurais convolucionais e segmentação de imagens: uma revisão bibliográfica}
+      \field{type}{Monografia (Graduação em Engenharia de Controle e Automação)}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.monografias.ufop.br/bitstream/35400000/2872/6/MONOGRAFIA_RedesNeuraisConvolucionais.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.monografias.ufop.br/bitstream/35400000/2872/6/MONOGRAFIA_RedesNeuraisConvolucionais.pdf
+      \endverb
+    \endentry
+    \entry{Domingues2016}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=1face15ec9ef5d6ccbc5a631e3b92e34}{%
+           family={Domingues},
+           familyi={D\bibinitperiod},
+           given={M.\bibnamedelimi O.},
+           giveni={M\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cc5cd3fc972ebda481f6b156d01bf565}{%
+           family={Mendes},
+           familyi={M\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b6e1def64bed4d9f4c2c7f5a41d8e48e}{%
+           family={Kaibara},
+           familyi={K\bibinitperiod},
+           given={M.\bibnamedelimi K.},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a52daa52031165a2f55d6ce8d5bcd2ff}{%
+           family={Menconi},
+           familyi={M\bibinitperiod},
+           given={V.\bibnamedelimi E.},
+           giveni={V\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a4d6c19b9a5a04ec9e068673f60012d6}{%
+           family={Bernardes},
+           familyi={B\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{66d08aaebd89d9db29fde2125c696ca0}
+      \strng{fullhash}{83c155632e69eaa50ab8ba9d9dfc349c}
+      \strng{bibnamehash}{66d08aaebd89d9db29fde2125c696ca0}
+      \strng{authorbibnamehash}{66d08aaebd89d9db29fde2125c696ca0}
+      \strng{authornamehash}{66d08aaebd89d9db29fde2125c696ca0}
+      \strng{authorfullhash}{83c155632e69eaa50ab8ba9d9dfc349c}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Revista Brasileira de Ensino de Física}
+      \field{number}{3}
+      \field{title}{Explorando a transformada wavelet contínua}
+      \field{volume}{38}
+      \field{year}{2016}
+      \field{pages}{1\bibrangedash 12}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1590/1806-9126-RBEF-2016-0019
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1590/1806-9126-RBEF-2016-0019
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1590/1806-9126-RBEF-2016-0019
+      \endverb
+    \endentry
+    \entry{Ferneda2006}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bb34a1c7939d237ddd0f28dce976d535}{%
+           family={Ferneda},
+           familyi={F\bibinitperiod},
+           given={Edberto},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bb34a1c7939d237ddd0f28dce976d535}
+      \strng{fullhash}{bb34a1c7939d237ddd0f28dce976d535}
+      \strng{bibnamehash}{bb34a1c7939d237ddd0f28dce976d535}
+      \strng{authorbibnamehash}{bb34a1c7939d237ddd0f28dce976d535}
+      \strng{authornamehash}{bb34a1c7939d237ddd0f28dce976d535}
+      \strng{authorfullhash}{bb34a1c7939d237ddd0f28dce976d535}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ciência da Informação}
+      \field{number}{1}
+      \field{title}{Redes neurais e sua aplicação em sistemas de recuperação de informação}
+      \field{volume}{35}
+      \field{year}{2006}
+      \field{pages}{25\bibrangedash 30}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1590/S0100-19652006000100003
+      \endverb
+      \verb{urlraw}
+      \verb https://www.scielo.br/j/ci/a/SQ9myjZWLxnyXfstXMgCdcH/?format=pdf&lang=pt
+      \endverb
+      \verb{url}
+      \verb https://www.scielo.br/j/ci/a/SQ9myjZWLxnyXfstXMgCdcH/?format=pdf&lang=pt
+      \endverb
+    \endentry
+    \entry{Freitas2006}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=b0b2f749c31ebcac30886ce4849e1948}{%
+           family={Freitas},
+           familyi={F\bibinitperiod},
+           given={Andréa\bibnamedelimb Gonçalves\bibnamedelima de},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim d\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=05e7c785ff2b2ffbf70750cfec305635}{%
+           family={Kemp},
+           familyi={K\bibinitperiod},
+           given={Cláudio},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=46d9107727abf5f37daf433fb7997366}{%
+           family={Louveira},
+           familyi={L\bibinitperiod},
+           given={Maria\bibnamedelima Helena},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=55feefc89cb479e7a370ade188628554}{%
+           family={Fujiwara},
+           familyi={F\bibinitperiod},
+           given={Sandra\bibnamedelima Maria},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=134185995ac18355ef3559a1accb60cc}{%
+           family={Campos},
+           familyi={C\bibinitperiod},
+           given={Leandro\bibnamedelima Ferracini},
+           giveni={L\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e042b38a508054397ffdaf2bdcfc1be1}
+      \strng{fullhash}{bec4c03843d1f5d02232362eeed8a0d9}
+      \strng{bibnamehash}{e042b38a508054397ffdaf2bdcfc1be1}
+      \strng{authorbibnamehash}{e042b38a508054397ffdaf2bdcfc1be1}
+      \strng{authornamehash}{e042b38a508054397ffdaf2bdcfc1be1}
+      \strng{authorfullhash}{bec4c03843d1f5d02232362eeed8a0d9}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Radiologia Brasileira}
+      \field{note}{Atualização}
+      \field{number}{4}
+      \field{title}{Mamografia Digital: Perspectiva Atual e Aplicações Futuras}
+      \field{volume}{39}
+      \field{year}{2006}
+      \field{pages}{287\bibrangedash 296}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1590/S0100-39842006000400012
+      \endverb
+    \endentry
+    \entry{gil}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ef995cf98b517fa1168fbbaefe74df6b}{%
+           family={Gil},
+           familyi={G\bibinitperiod},
+           given={Antônio\bibnamedelima Carlos},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ef995cf98b517fa1168fbbaefe74df6b}
+      \strng{fullhash}{ef995cf98b517fa1168fbbaefe74df6b}
+      \strng{bibnamehash}{ef995cf98b517fa1168fbbaefe74df6b}
+      \strng{authorbibnamehash}{ef995cf98b517fa1168fbbaefe74df6b}
+      \strng{authornamehash}{ef995cf98b517fa1168fbbaefe74df6b}
+      \strng{authorfullhash}{ef995cf98b517fa1168fbbaefe74df6b}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Como Elaborar Projetos de Pesquisa}
+      \field{year}{2002}
+      \verb{urlraw}
+      \verb https://files.cercomp.ufg.br/weby/up/150/o/Anexo_C1_como_elaborar_projeto_de_pesquisa_-_antonio_carlos_gil.pdf
+      \endverb
+      \verb{url}
+      \verb https://files.cercomp.ufg.br/weby/up/150/o/Anexo_C1_como_elaborar_projeto_de_pesquisa_-_antonio_carlos_gil.pdf
+      \endverb
+    \endentry
+    \entry{Goswami1999}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f12035284ca5f19cbee97b8fe9bdd554}{%
+           family={Goswami},
+           familyi={G\bibinitperiod},
+           given={Jaideva\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5b74371008becc75997468ef896147ac}{%
+           family={Chan},
+           familyi={C\bibinitperiod},
+           given={Andrew\bibnamedelima K.},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{cf255e4d4debf2a12b86df5cd53f2ce4}
+      \strng{fullhash}{cf255e4d4debf2a12b86df5cd53f2ce4}
+      \strng{bibnamehash}{cf255e4d4debf2a12b86df5cd53f2ce4}
+      \strng{authorbibnamehash}{cf255e4d4debf2a12b86df5cd53f2ce4}
+      \strng{authornamehash}{cf255e4d4debf2a12b86df5cd53f2ce4}
+      \strng{authorfullhash}{cf255e4d4debf2a12b86df5cd53f2ce4}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-471-25578-1}
+      \field{title}{Fundamentals of Wavelets: Theory, Algorithms, and Applications}
+      \field{year}{1999}
+    \endentry
+    \entry{ISIN2017268}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f8d6c4c541fba9254572f5d464e95901}{%
+           family={Isin},
+           familyi={I\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5694e466bbeffbaa7ae6118889ed02fe}{%
+           family={Ozdalili},
+           familyi={O\bibinitperiod},
+           given={Selen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cc128df9c5204d1ba1a19d7913946b5c}
+      \strng{fullhash}{cc128df9c5204d1ba1a19d7913946b5c}
+      \strng{bibnamehash}{cc128df9c5204d1ba1a19d7913946b5c}
+      \strng{authorbibnamehash}{cc128df9c5204d1ba1a19d7913946b5c}
+      \strng{authornamehash}{cc128df9c5204d1ba1a19d7913946b5c}
+      \strng{authorfullhash}{cc128df9c5204d1ba1a19d7913946b5c}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Procedia Computer Science}
+      \field{title}{Cardiac arrhythmia detection using deep learning}
+      \field{volume}{120}
+      \field{year}{2017}
+      \field{pages}{268\bibrangedash 275}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.procs.2017.11.238
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S187705091732450X
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S187705091732450X
+      \endverb
+    \endentry
+    \entry{jadoon2017three}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=3a7cb879d6bedac6de81de9c650c98b6}{%
+           family={Jadoon},
+           familyi={J\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=602a29bc69d6755cee5ce57fb171886f}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Q.},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c70f926e76d946950b84c592d1d4028c}{%
+           family={Haq},
+           familyi={H\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=28a52e7c5278499ac03ef9e29b71930e}{%
+           family={Butt},
+           familyi={B\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a8a03b844dbaa5131c27ad6e2ec5efd7}{%
+           family={Jadoon},
+           familyi={J\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Hindawi}%
+      }
+      \strng{namehash}{e3d3ab0cfb75573d6dbf8d3c710d16ee}
+      \strng{fullhash}{3cf73351978fecbab096de7ad4cc8f1e}
+      \strng{bibnamehash}{e3d3ab0cfb75573d6dbf8d3c710d16ee}
+      \strng{authorbibnamehash}{e3d3ab0cfb75573d6dbf8d3c710d16ee}
+      \strng{authornamehash}{e3d3ab0cfb75573d6dbf8d3c710d16ee}
+      \strng{authorfullhash}{3cf73351978fecbab096de7ad4cc8f1e}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BioMed Research International}
+      \field{title}{Three-class mammogram classification based on descriptive CNN features}
+      \field{volume}{2017}
+      \field{year}{2017}
+      \field{pages}{1\bibrangedash 11}
+      \range{pages}{11}
+    \endentry
+    \entry{leite2018analise}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=c4e0726d5909dbb341c57a475646a29f}{%
+           family={Leite},
+           familyi={L\bibinitperiod},
+           given={Francisco\bibnamedelimb E.\bibnamedelimi A.},
+           giveni={F\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=97eca7a46172a1955ce16214a5dea89a}{%
+           family={Henriques},
+           familyi={H\bibinitperiod},
+           given={Marcos\bibnamedelimb V.\bibnamedelimi C.},
+           giveni={M\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ab40345e7f778c2ea22ca7485d361ed7}{%
+           family={Cunha},
+           familyi={C\bibinitperiod},
+           given={Maytê\bibnamedelimb T.\bibnamedelimi N.},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cf006e7f15c494fbb6aafcdd20b914e2}
+      \strng{fullhash}{cf006e7f15c494fbb6aafcdd20b914e2}
+      \strng{bibnamehash}{cf006e7f15c494fbb6aafcdd20b914e2}
+      \strng{authorbibnamehash}{cf006e7f15c494fbb6aafcdd20b914e2}
+      \strng{authornamehash}{cf006e7f15c494fbb6aafcdd20b914e2}
+      \strng{authorfullhash}{cf006e7f15c494fbb6aafcdd20b914e2}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Anais do Encontro de Computação do Oeste Potiguar ECOP/UFERSA}
+      \field{number}{2}
+      \field{title}{Análise de Imagens em Escalas Utilizando a Transformada Wavelet}
+      \field{volume}{1}
+      \field{year}{2018}
+      \field{pages}{59\bibrangedash 66}
+      \range{pages}{8}
+      \verb{urlraw}
+      \verb https://periodicos.ufersa.edu.br/ecop/article/view/7903
+      \endverb
+      \verb{url}
+      \verb https://periodicos.ufersa.edu.br/ecop/article/view/7903
+      \endverb
+    \endentry
+    \entry{kmader_mias_2018}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c07421a571558977425b00e70d1f1702}{%
+           family={Mader},
+           familyi={M\bibinitperiod},
+           given={Klemens},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c07421a571558977425b00e70d1f1702}
+      \strng{fullhash}{c07421a571558977425b00e70d1f1702}
+      \strng{bibnamehash}{c07421a571558977425b00e70d1f1702}
+      \strng{authorbibnamehash}{c07421a571558977425b00e70d1f1702}
+      \strng{authornamehash}{c07421a571558977425b00e70d1f1702}
+      \strng{authorfullhash}{c07421a571558977425b00e70d1f1702}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.kaggle.com/datasets/kmader/mias-mammography}}
+      \field{note}{Disponível no Kaggle. Base com imagens mamográficas digitalizadas e anotações clínicas da Mammographic Image Analysis Society (MIAS). Acesso em: 30 jun. 2025.}
+      \field{title}{MIAS Mammography Database}
+      \field{year}{2018}
+    \endentry
+    \entry{Magrini2020}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6a9d0ddc427878d840d7d101aaf4577d}{%
+           family={Magrini},
+           familyi={M\bibinitperiod},
+           given={Luciano\bibnamedelima Aparecido},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6a9d0ddc427878d840d7d101aaf4577d}
+      \strng{fullhash}{6a9d0ddc427878d840d7d101aaf4577d}
+      \strng{bibnamehash}{6a9d0ddc427878d840d7d101aaf4577d}
+      \strng{authorbibnamehash}{6a9d0ddc427878d840d7d101aaf4577d}
+      \strng{authornamehash}{6a9d0ddc427878d840d7d101aaf4577d}
+      \strng{authorfullhash}{6a9d0ddc427878d840d7d101aaf4577d}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{C.Q.D. – Revista Eletrônica Paulista de Matemática}
+      \field{title}{Funções wavelet e transformada wavelet contínua: representação simultânea nos domínios do tempo e da frequência}
+      \field{volume}{19}
+      \field{year}{2020}
+      \field{pages}{17\bibrangedash 32}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.21167/cqdvol19202023169664lam1732
+      \endverb
+      \verb{urlraw}
+      \verb https://www.fc.unesp.br/Home/Departamentos/Matematica/revistacqd2228/v19a03-funcoes-wavelet-e-transfomada-wavelet-continua.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.fc.unesp.br/Home/Departamentos/Matematica/revistacqd2228/v19a03-funcoes-wavelet-e-transfomada-wavelet-continua.pdf
+      \endverb
+    \endentry
+    \entry{MammoImageDatabases}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=24f8c20c2cdc4cf7aab08fdf4f25fc74}{%
+           family={{Mammographic Image Analysis Homepage}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{24f8c20c2cdc4cf7aab08fdf4f25fc74}
+      \strng{fullhash}{24f8c20c2cdc4cf7aab08fdf4f25fc74}
+      \strng{bibnamehash}{24f8c20c2cdc4cf7aab08fdf4f25fc74}
+      \strng{authorbibnamehash}{24f8c20c2cdc4cf7aab08fdf4f25fc74}
+      \strng{authornamehash}{24f8c20c2cdc4cf7aab08fdf4f25fc74}
+      \strng{authorfullhash}{24f8c20c2cdc4cf7aab08fdf4f25fc74}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.mammoimage.org/databases/}}
+      \field{note}{Acessado em 30 de junho de 2025}
+      \field{title}{{Databases – MammoImage.org}}
+      \field{year}{2009}
+    \endentry
+    \entry{MayorMartinsPerceptron}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=233f0b5765665aa2e2692f8d2d4d281c}{%
+           family={Martins},
+           familyi={M\bibinitperiod},
+           given={R.\bibnamedelimi Mayor},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{233f0b5765665aa2e2692f8d2d4d281c}
+      \strng{fullhash}{233f0b5765665aa2e2692f8d2d4d281c}
+      \strng{bibnamehash}{233f0b5765665aa2e2692f8d2d4d281c}
+      \strng{authorbibnamehash}{233f0b5765665aa2e2692f8d2d4d281c}
+      \strng{authornamehash}{233f0b5765665aa2e2692f8d2d4d281c}
+      \strng{authorfullhash}{233f0b5765665aa2e2692f8d2d4d281c}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Website pessoal}
+      \field{note}{Acesso em 26 de junho de 2025}
+      \field{title}{Perceptron: projeto e implementação}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://rmayormartins.github.io/tools-ia-projects/perceptron.html
+      \endverb
+      \verb{url}
+      \verb https://rmayormartins.github.io/tools-ia-projects/perceptron.html
+      \endverb
+    \endentry
+    \entry{martins2024exploring}{article}{}
+      \name{author}{5}{ul=1}{%
+        {{un=0,uniquepart=base,hash=d03157d31e527360373217fd764d4afd}{%
+           family={Martins},
+           familyi={M\bibinitperiod},
+           given={Ramon\bibnamedelima Mayor},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=993d6521591321cffac2bbe3d044d3dd}{%
+           family={Wangenheim},
+           familyi={W\bibinitperiod},
+           given={Christiane\bibnamedelima G.},
+           giveni={C\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0,
+           prefix={von},
+           prefixi={v\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=71a4c20246627b1a39b4f12fdb56daf6}{%
+           family={Rauber},
+           familyi={R\bibinitperiod},
+           given={Marcelo\bibnamedelima F.},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=df95fe0700f6e0dca2aa70fafc5c56e1}{%
+           family={Borgatto},
+           familyi={B\bibinitperiod},
+           given={Adriano\bibnamedelima F.},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8642c08ec2a97e8df9cc83a29530da92}{%
+           family={Hauck},
+           familyi={H\bibinitperiod},
+           given={Jean\bibnamedelimb C.\bibnamedelimi R.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b6005fa5655d66b0bf3485e0308a333d}
+      \strng{fullhash}{7ff494ec4e312d7b103a03ac01b77b24}
+      \strng{bibnamehash}{b6005fa5655d66b0bf3485e0308a333d}
+      \strng{authorbibnamehash}{b6005fa5655d66b0bf3485e0308a333d}
+      \strng{authornamehash}{b6005fa5655d66b0bf3485e0308a333d}
+      \strng{authorfullhash}{7ff494ec4e312d7b103a03ac01b77b24}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Transactions on Computing Education}
+      \field{month}{9}
+      \field{number}{3}
+      \field{title}{Exploring the relationship between learning of machine learning concepts and socioeconomic status background among middle and high school students: a comparative analysis}
+      \field{urlday}{20}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{volume}{24}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 31}
+      \range{pages}{31}
+      \verb{doi}
+      \verb 10.1145/3680288
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3680288
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3680288
+      \endverb
+    \endentry
+    \entry{Miyazaki2017}{bachelorsthesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=32b80c60d05076b0b74d2d97deae3c19}{%
+           family={Miyazaki},
+           familyi={M\bibinitperiod},
+           given={Caio\bibnamedelima Kioshi},
+           giveni={C\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Universidade de São Paulo, Escola de Engenharia de São Carlos}%
+      }
+      \strng{namehash}{32b80c60d05076b0b74d2d97deae3c19}
+      \strng{fullhash}{32b80c60d05076b0b74d2d97deae3c19}
+      \strng{bibnamehash}{32b80c60d05076b0b74d2d97deae3c19}
+      \strng{authorbibnamehash}{32b80c60d05076b0b74d2d97deae3c19}
+      \strng{authornamehash}{32b80c60d05076b0b74d2d97deae3c19}
+      \strng{authorfullhash}{32b80c60d05076b0b74d2d97deae3c19}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Redes neurais convolucionais para aprendizagem e reconhecimento de objetos 3D}
+      \field{type}{Trabalho de Conclusão de Curso (Graduação)}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://bdta.abcd.usp.br/directbitstream/ee692ea6-3d9c-4d48-92a6-c672e8dbef07/Miyazaki_caio_tcc.pdf
+      \endverb
+      \verb{url}
+      \verb https://bdta.abcd.usp.br/directbitstream/ee692ea6-3d9c-4d48-92a6-c672e8dbef07/Miyazaki_caio_tcc.pdf
+      \endverb
+    \endentry
+    \entry{Mupparaju2013}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=5c0bc0ba829396f09b7f479cdacaa6a4}{%
+           family={Mupparaju},
+           familyi={M\bibinitperiod},
+           given={Shivani},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d4f694614971d2d8b985f2efbea6af7d}{%
+           family={Jahnavi},
+           familyi={J\bibinitperiod},
+           given={B.\bibnamedelimi Naga\bibnamedelimb Venkata\bibnamedelimb Satya\bibnamedelima Durga},
+           giveni={B\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{12e19f3e91c81a9b4af744a63e535c6f}
+      \strng{fullhash}{12e19f3e91c81a9b4af744a63e535c6f}
+      \strng{bibnamehash}{12e19f3e91c81a9b4af744a63e535c6f}
+      \strng{authorbibnamehash}{12e19f3e91c81a9b4af744a63e535c6f}
+      \strng{authornamehash}{12e19f3e91c81a9b4af744a63e535c6f}
+      \strng{authorfullhash}{12e19f3e91c81a9b4af744a63e535c6f}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Engineering Research \& Technology (IJERT)}
+      \field{number}{9}
+      \field{title}{Comparison of Various Thresholding Techniques of Image Denoising}
+      \field{volume}{2}
+      \field{year}{2013}
+      \field{pages}{3293\bibrangedash 3298}
+      \range{pages}{6}
+      \verb{urlraw}
+      \verb https://www.ijert.org/research/comparison-of-various-thresholding-techniques-of-image-denoising-IJERTV2IS90812.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.ijert.org/research/comparison-of-various-thresholding-techniques-of-image-denoising-IJERTV2IS90812.pdf
+      \endverb
+    \endentry
+    \entry{oyelade2022novel}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d5c242a026ca4df7f254168c18219cbd}{%
+           family={Oyelade},
+           familyi={O\bibinitperiod},
+           given={Olaide\bibnamedelima N.},
+           giveni={O\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7d0212acf93bc31f5ada23a3e50b1841}{%
+           family={Ezugwu},
+           familyi={E\bibinitperiod},
+           given={Absalom\bibnamedelima E.},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0cf2c2c7f2e31ba4348c572773c73c00}
+      \strng{fullhash}{0cf2c2c7f2e31ba4348c572773c73c00}
+      \strng{bibnamehash}{0cf2c2c7f2e31ba4348c572773c73c00}
+      \strng{authorbibnamehash}{0cf2c2c7f2e31ba4348c572773c73c00}
+      \strng{authornamehash}{0cf2c2c7f2e31ba4348c572773c73c00}
+      \strng{authorfullhash}{0cf2c2c7f2e31ba4348c572773c73c00}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Scientific Reports}
+      \field{title}{A novel wavelet decomposition and transformation convolutional neural network with data augmentation for breast cancer detection using digital mammogram}
+      \field{urlday}{28}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{volume}{12}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \field{pages}{5913}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41598-022-09905-3
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s41598-022-09905-3
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s41598-022-09905-3
+      \endverb
+    \endentry
+    \entry{PassigSilva2022}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=40d1abc3571e8b07f4df4a83f7eaa622}{%
+           family={Passig\bibnamedelimb e\bibnamedelima Silva},
+           familyi={P\bibinitperiod\bibinitdelim e\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Eduarda},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Instituto Federal de Santa Catarina – Campus São José}%
+      }
+      \strng{namehash}{40d1abc3571e8b07f4df4a83f7eaa622}
+      \strng{fullhash}{40d1abc3571e8b07f4df4a83f7eaa622}
+      \strng{bibnamehash}{40d1abc3571e8b07f4df4a83f7eaa622}
+      \strng{authorbibnamehash}{40d1abc3571e8b07f4df4a83f7eaa622}
+      \strng{authornamehash}{40d1abc3571e8b07f4df4a83f7eaa622}
+      \strng{authorfullhash}{40d1abc3571e8b07f4df4a83f7eaa622}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{sheet}
+      \field{title}{Detecção de nódulos em imagens de mamografia usando wavelet e inteligência artificial}
+      \field{type}{TCC (Engenharia de Telecomunicações)}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://wiki.sj.ifsc.edu.br/images/0/09/TCC_68_EDUARDA_PASSIG_E_SILVA.pdf
+      \endverb
+      \verb{url}
+      \verb https://wiki.sj.ifsc.edu.br/images/0/09/TCC_68_EDUARDA_PASSIG_E_SILVA.pdf
+      \endverb
+    \endentry
+    \entry{rasheed2021use}{misc}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=2581e3a5807b379d24e792633a691b33}{%
+           family={Rasheed},
+           familyi={R\bibinitperiod},
+           given={Ahmed},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d386f60cb9ea7e496f7ad4f4a2f0f3b4}{%
+           family={Younis},
+           familyi={Y\bibinitperiod},
+           given={Muhammad\bibnamedelima Shahzad},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f55026359def906ce7eb1096c07d28a2}{%
+           family={Qadir},
+           familyi={Q\bibinitperiod},
+           given={Junaid},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=538e00be099131eb89f9d1633c4c6c64}{%
+           family={Bilal},
+           familyi={B\bibinitperiod},
+           given={Muhammad},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{83d495f0e5827967cb8f117ba8df9063}
+      \strng{fullhash}{d4f7e3eaaf180a1a90c48d1583750055}
+      \strng{bibnamehash}{83d495f0e5827967cb8f117ba8df9063}
+      \strng{authorbibnamehash}{83d495f0e5827967cb8f117ba8df9063}
+      \strng{authornamehash}{83d495f0e5827967cb8f117ba8df9063}
+      \strng{authorfullhash}{d4f7e3eaaf180a1a90c48d1583750055}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{eess.IV}
+      \field{eprinttype}{arXiv}
+      \field{note}{arXiv preprint}
+      \field{title}{Use of transfer learning and wavelet transform for breast cancer detection}
+      \field{urlday}{28}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{eprint}
+      \verb 2103.03602
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2103.03602
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2103.03602
+      \endverb
+    \endentry
+    \entry{Rosa2025}{bachelorsthesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f4979c34a4efdd88761f9b2553610fdc}{%
+           family={Rosa},
+           familyi={R\bibinitperiod},
+           given={Andrey\bibnamedelimb Adriano\bibnamedelima da},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim d\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Instituto Federal de Santa Catarina (IFSC), Campus São José}%
+      }
+      \strng{namehash}{f4979c34a4efdd88761f9b2553610fdc}
+      \strng{fullhash}{f4979c34a4efdd88761f9b2553610fdc}
+      \strng{bibnamehash}{f4979c34a4efdd88761f9b2553610fdc}
+      \strng{authorbibnamehash}{f4979c34a4efdd88761f9b2553610fdc}
+      \strng{authornamehash}{f4979c34a4efdd88761f9b2553610fdc}
+      \strng{authorfullhash}{f4979c34a4efdd88761f9b2553610fdc}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Reconhecimento por imagem de lances de xadrez com visão computacional e redes neurais convolucionais}
+      \field{type}{Trabalho de Conclusão de Curso (Engenharia de Telecomunicações)}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://wiki.sj.ifsc.edu.br/images/a/a0/TCC_ANDREY_ADRIANO_DA_ROSA.pdf
+      \endverb
+      \verb{url}
+      \verb https://wiki.sj.ifsc.edu.br/images/a/a0/TCC_ANDREY_ADRIANO_DA_ROSA.pdf
+      \endverb
+    \endentry
+    \entry{SECHOPOULOS2021214}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=a5108ba281e2dcf9a50886fa0cf875aa}{%
+           family={Sechopoulos},
+           familyi={S\bibinitperiod},
+           given={Ioannis},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=04cdefff41603b02ff703c998e106964}{%
+           family={Teuwen},
+           familyi={T\bibinitperiod},
+           given={Jonas},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1a0bad641f013376798aaa9d04b043dd}{%
+           family={Mann},
+           familyi={M\bibinitperiod},
+           given={Ritse},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{dbdbc856660545cf695c6aa633c679fe}
+      \strng{fullhash}{dbdbc856660545cf695c6aa633c679fe}
+      \strng{bibnamehash}{dbdbc856660545cf695c6aa633c679fe}
+      \strng{authorbibnamehash}{dbdbc856660545cf695c6aa633c679fe}
+      \strng{authornamehash}{dbdbc856660545cf695c6aa633c679fe}
+      \strng{authorfullhash}{dbdbc856660545cf695c6aa633c679fe}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Seminars in Cancer Biology}
+      \field{title}{Artificial intelligence for breast cancer detection in mammography and digital breast tomosynthesis: State of the art}
+      \field{volume}{72}
+      \field{year}{2021}
+      \field{pages}{214\bibrangedash 225}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1016/j.semcancer.2020.06.002
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1044579X20301358
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1044579X20301358
+      \endverb
+    \endentry
+    \entry{SilvaJunior2022}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a06a5b2df18b45c666f8acfc91bea4c9}{%
+           family={Silva\bibnamedelima Junior},
+           familyi={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={Edvaldo\bibnamedelimb Castro\bibnamedelima da},
+           giveni={E\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim d\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Universidade de São Paulo, Faculdade de Filosofia, Ciências e Letras de Ribeirão Preto}%
+      }
+      \strng{namehash}{a06a5b2df18b45c666f8acfc91bea4c9}
+      \strng{fullhash}{a06a5b2df18b45c666f8acfc91bea4c9}
+      \strng{bibnamehash}{a06a5b2df18b45c666f8acfc91bea4c9}
+      \strng{authorbibnamehash}{a06a5b2df18b45c666f8acfc91bea4c9}
+      \strng{authornamehash}{a06a5b2df18b45c666f8acfc91bea4c9}
+      \strng{authorfullhash}{a06a5b2df18b45c666f8acfc91bea4c9}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{sheet}
+      \field{title}{Construção e análise de rede neural convolucional com neurônios pulsados para classificação de imagens}
+      \field{type}{Dissertação de Mestrado}
+      \field{year}{2022}
+    \endentry
+    \entry{sousa2017desenvolvimento}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=83fb01745066cb423cae717b2bf957b6}{%
+           family={Sousa},
+           familyi={S\bibinitperiod},
+           given={Maria\bibnamedelimb Angélica\bibnamedelima Zucareli},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Escola de Engenharia de São Carlos, Universidade de São Paulo}%
+      }
+      \list{location}{1}{%
+        {São Carlos}%
+      }
+      \strng{namehash}{83fb01745066cb423cae717b2bf957b6}
+      \strng{fullhash}{83fb01745066cb423cae717b2bf957b6}
+      \strng{bibnamehash}{83fb01745066cb423cae717b2bf957b6}
+      \strng{authorbibnamehash}{83fb01745066cb423cae717b2bf957b6}
+      \strng{authornamehash}{83fb01745066cb423cae717b2bf957b6}
+      \strng{authorfullhash}{83fb01745066cb423cae717b2bf957b6}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{sheet}
+      \field{note}{Tese de Doutorado}
+      \field{title}{Desenvolvimento de um objeto simulador de mama: investigações da percepção visual da imagem e do desempenho de esquemas CADx}
+      \field{type}{phdthesis}
+      \field{year}{2017}
+    \endentry
+    \entry{teare2017malignancy}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=68cf2a31726a1cc9c20ab2c32277e072}{%
+           family={Teare},
+           familyi={T\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c5d57bb16e95f9fb6fda9a289daa5f39}{%
+           family={Fishman},
+           familyi={F\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ac53abf47d84fe452207c3a78f35f86b}{%
+           family={Benzaquen},
+           familyi={B\bibinitperiod},
+           given={Oren},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=423ba703a180c2fd3405e3f84ef4cfa1}{%
+           family={Toledano},
+           familyi={T\bibinitperiod},
+           given={Elad},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=706635a3002f1ec0918b95fb395ce1ea}{%
+           family={Elnekave},
+           familyi={E\bibinitperiod},
+           given={Eran},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{551fdfb3bf4da7bd25727aa19bcb99da}
+      \strng{fullhash}{cc29687027a071c09f5035c13e5843a3}
+      \strng{bibnamehash}{551fdfb3bf4da7bd25727aa19bcb99da}
+      \strng{authorbibnamehash}{551fdfb3bf4da7bd25727aa19bcb99da}
+      \strng{authornamehash}{551fdfb3bf4da7bd25727aa19bcb99da}
+      \strng{authorfullhash}{cc29687027a071c09f5035c13e5843a3}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Digital Imaging}
+      \field{number}{4}
+      \field{title}{Malignancy detection on mammography using dual deep convolutional neural networks and genetically discovered false color input enhancement}
+      \field{volume}{30}
+      \field{year}{2017}
+      \field{pages}{499\bibrangedash 505}
+      \range{pages}{7}
+    \endentry
+    \entry{very_neural_network}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=54e8fab7df8f9374a818697e2d30cff8}{%
+           family={{Very Technology}},
+           familyi={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{54e8fab7df8f9374a818697e2d30cff8}
+      \strng{fullhash}{54e8fab7df8f9374a818697e2d30cff8}
+      \strng{bibnamehash}{54e8fab7df8f9374a818697e2d30cff8}
+      \strng{authorbibnamehash}{54e8fab7df8f9374a818697e2d30cff8}
+      \strng{authornamehash}{54e8fab7df8f9374a818697e2d30cff8}
+      \strng{authorfullhash}{54e8fab7df8f9374a818697e2d30cff8}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 26 jun. 2025}
+      \field{title}{Machine Learning Algorithms: What is a Neural Network?}
+      \field{year}{n.d.}
+      \verb{urlraw}
+      \verb https://www.verytechnology.com/insights/machine-learning-algorithms-what-is-a-neural-network
+      \endverb
+      \verb{url}
+      \verb https://www.verytechnology.com/insights/machine-learning-algorithms-what-is-a-neural-network
+      \endverb
+    \endentry
+  \enddatalist
+  \missing{https://www.kaggle.com/datasets/kmader/mias-mammography}
+\endrefsection
+\endinput
+

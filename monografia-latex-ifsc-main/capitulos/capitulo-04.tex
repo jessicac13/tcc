@@ -1,0 +1,462 @@
+\chapter{Proposta}\label{cap:proposta}
+
+Esta pesquisa propõe o desenvolvimento e a avaliação de modelos de aprendizado profundo para detecção de nódulos mamários, utilizando tanto uma arquitetura convolucional simples, desenvolvida do zero, quanto redes neurais convolucionais baseadas em \textit{Transfer Learning}. Além disso, são incorporadas técnicas de pré-processamento baseadas na Transformada \textit{Wavelet} e estratégias de \textit{data augmentation}. A proposta é implementada a partir de uma base pública de mamografias, contendo imagens previamente anotadas, utilizando ferramentas de código aberto. 
+
+Os modelos são treinados e avaliados em diferentes cenários, considerando ou não o uso da \textit{Wavelet} e das técnicas de aumento de dados, e seus desempenhos são analisados por meio de métricas como acurácia, precisão, recall e F1-score. O objetivo é investigar o impacto dessas estratégias de tratamento de dados na performance dos sistemas de detecção, permitindo compreender como cada combinação de técnicas contribui para a identificação de anomalias.
+
+\chapter{Metodologia}\label{sec:metodologia}
+O desenvolvimento deste trabalho segue os princípios do processo de Aprendizado de Máquina Centrado no Ser Humano (HCML - \textit{Human-Centered Machine Learning}) proposto por Martins et al. (2023), conforme representado na \autoref{fig:ramon}. 
+
+\begin{figure}[ht]
+	\centering
+	\caption{Etapas do processo de Aprendizado de Máquina Centrado no Ser Humano (HCML)}\label{fig:ramon}
+	\includegraphics[width=15cm]{figuras/ramon.png}
+    \fonte{\cite{martins2024exploring}.}
+\end{figure}
+
+Esse processo compreende as seguintes etapas: 1-análise dos requisitos, 2-preparação dos dados, 3-treinamento do modelo, 4-avaliação do modelo, 5-predição e 6-exportação. Tais fases não são necessariamente lineares, sendo comum o retorno iterativo entre o treinamento e a avaliação até a obtenção de um modelo satisfatório.
+
+A pesquisa é de natureza quantitativa, aplicada e classificada como um quase-experimento tecnológico \cite{gil}, por envolver base em análise estatística, utilizando dados secundários (prontos).
+
+\section{Coleta de Dados}
+
+São utilizadas imagens provenientes da base pública \textit{Mini-MIAS}\footcite{https://www.kaggle.com/datasets/kmader/mias-mammography}, compostas por dados secundários quantitativos, como imagens de mamografia e anotações feitas por radiologistas. 
+
+\subsection*{\textit{Mini-MIAS}}
+A base \textit{Mini-MIAS (Mammographic Image Analysis Society)} é amplamente utilizada em pesquisas sobre detecção de câncer de mama e consiste em um subconjunto da base original MIAS, contendo 322 imagens mamográficas digitalizadas a partir de filmes do programa nacional de triagem do Reino Unido. As imagens possuem resolução de 1024×1024 pixels, em formato PGM (\textit{Portable Gray Map}). Cada imagem é acompanhada de anotações fornecidas por radiologistas, que indicam a presença, o tipo (como massa, calcificação, distorção arquitetural) e a localização aproximada das anomalias por meio de coordenadas do centro e raio de uma elipse. Vale destacar que esses rótulos representam avaliações clínicas, e não confirmação histopatológica, o que deve ser considerado na análise dos resultados. Ainda assim, essa base permite o treinamento e a avaliação de modelos voltados à triagem e apoio ao diagnóstico, especialmente em contextos de investigação de densidade mamária e detecção de nódulos \cite{MammoImageDatabases}.
+
+Cada imagem da base possui uma etiqueta descritiva composta por colunas que indicam: (i) o identificador do exame, (ii) a densidade do tecido mamário, podendo ser F (gorduroso), G (gorduroso-glandular) ou D (denso-glandular), (iii) o tipo de anormalidade presente, como calcificações (CALC), massas circunscritas (CIRC), massas espiculadas (SPIC), distorções arquitetônicas (ARCH), assimetrias (ASYM), outras massas mal definidas (MISC) ou ainda casos normais (NORM), (iv) a gravidade da anormalidade, com rótulos B (benigno) ou M (maligno), e (v-vi) as coordenadas centrais da lesão (x, y), seguidas de (vii) um raio estimado em pixels de um círculo que engloba a região de interesse \cite{kmader_mias_2018}.
+
+As imagens estão organizadas em pares, correspondendo às mamas esquerda e direita de cada paciente. Em casos de calcificações amplamente distribuídas, as coordenadas centrais e raios podem estar ausentes. A origem das coordenadas está localizada no canto inferior esquerdo da imagem.
+
+A \autoref{fig:exemplos-mini-mias} apresenta exemplos das primeiras imagens do conjunto Mini-MIAS, ilustrando a aparência típica das mamografias utilizadas no estudo.
+
+\begin{figure}[!h]
+    \centering
+    \caption{Exemplos das primeiras imagens do conjunto Mini-MIAS}
+    \includegraphics[width=\textwidth]{figuras/minimias.png}
+    \fonteproprioautor
+    \label{fig:exemplos-mini-mias}
+\end{figure}
+
+
+\section{Experimento}\label{subsec:experimento}
+
+Para avaliar o impacto de diferentes estratégias de pré-processamento, \textit{data augmentation} e arquiteturas de redes neurais convolucionais na tarefa de classificação binária (Normal vs. Anormal), foram conduzidos experimentos sistemáticos divididos em três etapas principais:
+
+
+\subsection*{ 1. Definição da arquitetura}
+
+\begin{itemize}
+    \item \textbf{\textit{CNN} simples desenvolvida manualmente}: composta por duas camadas convolucionais (8 e 16 filtros de $3\times3$, com ativação ReLU), seguidas de operações de \textit{max-pooling} $2\times2$ que reduzem progressivamente a resolução espacial ($224\rightarrow112\rightarrow56$). Após o achatamento do mapa de características, uma camada totalmente conectada realiza a classificação binária.
+    
+    \item \textbf{Modelos pré-treinados ResNet18, ResNet34 e ResNet50}: todas as variantes foram inicializadas com pesos treinados no ImageNet e tiveram sua camada final substituída por um classificador de duas saídas. As ResNets empregam blocos residuais que facilitam o fluxo de gradiente, permitindo analisar o comportamento de arquiteturas com diferentes profundidades e capacidades de representação. As arquiteturas foram selecionadas com base em sua ampla adoção e validação na literatura especializada em classificação de imagens médicas.
+\end{itemize}
+
+\subsection*{2. Aplicação de combinações de tratamento de dados}
+
+Para cada arquitetura foram testadas até quatro configurações:
+
+\begin{enumerate}
+    \item Sem pré-processamento e sem \textit{data augmentation}
+    \item Apenas \textit{Data Augmentation}
+    \item Apenas Pré-processamento Wavelet
+    \begin{itemize}
+        \item Coiflet 4: Filtragem utilizando \textit{wavelets} da família Coiflet de ordem 4
+        \item Daubechies 4: Filtragem utilizando \textit{wavelets} da família Daubechies de ordem 4
+        \item Symlet 4: Filtragem utilizando \textit{wavelets} da família Symlet de ordem 4
+    \end{itemize}
+    \item Pré-processamento Wavelet + \textit{Data Augmentation}
+    \begin{itemize}
+        \item Coiflet 4 + Augmentation: Combinação da filtragem Coiflet 4 com técnicas de aumento de dados
+        \item Daubechies 4 + Augmentation: Combinação da filtragem Daubechies 4 com técnicas de aumento de dados
+        \item Symlet 4 + Augmentation: Combinação da filtragem Symlet com técnicas de aumento de dados
+    \end{itemize}
+\end{enumerate}
+
+A \autoref{quad:planejamento_experimental} resume o planejamento experimental adotado. 
+
+
+\begin{quadro}[!ht]
+\centering
+
+\renewcommand{\arraystretch}{0.95}
+\setlength{\tabcolsep}{5pt}
+
+\caption{Cenários de Treinamento Considerados}
+\begin{tabular}{|p{2.6cm}|l|}
+\hline
+\textbf{Arquitetura} & \textbf{Configuração} \\
+\hline
+
+\multirow{8}{=}{\textbf{\textit{CNN} Simples}}
+    & Baseline \\
+    & + Augmentation \\
+    & + Preproc Coiflet \\
+    & + Preproc db4 \\
+    & + Preproc sym4 \\
+    & + Preproc Coiflet + Augmentation \\
+    & + Preproc db4 + Augmentation \\
+    & + Preproc sym4 + Augmentation \\
+\hline
+
+\multirow{8}{=}{\textbf{ResNet18}}
+    & Baseline \\
+    & + Augmentation \\
+    & + Preproc Coiflet \\
+    & + Preproc db4 \\
+    & + Preproc sym4 \\
+    & + Preproc Coiflet + Augmentation \\
+    & + Preproc db4 + Augmentation \\
+    & + Preproc sym4 + Augmentation \\
+\hline
+
+\multirow{8}{=}{\textbf{ResNet34}}
+    & Baseline \\
+    & + Augmentation \\
+    & + Preproc Coiflet \\
+    & + Preproc db4 \\
+    & + Preproc sym4 \\
+    & + Preproc Coiflet + Augmentation \\
+    & + Preproc db4 + Augmentation \\
+    & + Preproc sym4 + Augmentation \\
+\hline
+
+\multirow{8}{=}{\textbf{ResNet50}}
+    & Baseline \\
+    & + Augmentation \\
+    & + Preproc Coiflet \\
+    & + Preproc db4 \\
+    & + Preproc sym4 \\
+    & + Preproc Coiflet + Augmentation \\
+    & + Preproc db4 + Augmentation \\
+    & + Preproc sym4 + Augmentation \\
+\hline
+\end{tabular}
+\label{quad:planejamento_experimental}
+\end{quadro}
+
+
+\newpage
+\subsection*{3. Avaliação padronizada}
+
+Cada modelo foi treinado e avaliado com a mesma divisão de dados, utilizando como métricas:
+
+
+\begin{itemize}
+    \item \textbf{Acurácia}: proporção de predições corretas no total.
+    \item \textbf{Precision (Precisão)}: proporção de predições corretas para cada classe (Normal ou Anormal).
+    \item \textbf{Recall (Sensibilidade)}: proporção de exemplos reais de cada classe corretamente identificados.
+    \item \textbf{F1-score}: média harmônica entre precisão e recall para cada classe.
+    \item \textbf{Observações qualitativas}: considerações sobre desbalanceamento, viés e estabilidade do modelo.
+\end{itemize}
+
+
+
+\subsection{Pré-processamento das Imagens}\label{subsec:preprocessamento}
+
+O pré-processamento foi composto por quatro etapas principais: segmentação da mama, realce de regiões densas, remoção de ruído por \textit{wavelets} e ajuste de brilho local. Após essas etapas, as imagens foram convertidas para tensor e normalizadas com média 0,5 e desvio-padrão 0,5. A figura a seguir demonstra a comparação entre uma imagem original e uma processada.
+
+\begin{figure}[h]
+    \centering
+     \caption{Exemplo de comparação visual entre a imagem original e a imagem préprocessada}
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/mdb005original.png}
+        \caption*{(a) Imagem Original}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/mdb005preproc.png}
+        \caption*{(b) Imagem Pré-processada}
+    
+    \end{minipage}
+    \fonteproprioautor
+   
+\end{figure}
+
+\subsection*{Segmentação da Região da Mama}
+
+A primeira etapa consistiu na segmentação da área mamária, removendo fundo preto, rótulos e demais artefatos que não contribuem para a análise. O processo ocorreu em cinco passos:
+
+\begin{enumerate}
+    \item Binarização inicial da imagem;
+    \item Remoção de ruídos por operações morfológicas;
+    \item Identificação das componentes conectadas;
+    \item Seleção da maior região conectada, assumida como o tecido mamário;
+    \item Aplicação de máscara para descartar todas as demais regiões.
+\end{enumerate}
+
+A segmentação garantiu que apenas o tecido mamário fosse mantido para as etapas posteriores, produzindo imagens mais consistentes para o treinamento. A função resultante isola a região mamária de forma consistente e padronizada.
+
+\subsection*{Realce de Pixels Claros (Regiões Densas)}
+
+Para destacar áreas de potencial interesse radiológico, que frequentemente apresentam maior intensidade de pixel, foi aplicada uma operação de limiarização com limiar fixo de 145, sendo um limiar de intensidade na escala 0–255 da imagem em tons de cinza. Esta abordagem, determinada empiricamente através de análise visual iterativa, mostrou-se eficaz para isolar seletivamente os pixels de maior intensidade luminosa na imagem segmentada, correspondentes às regiões de densidade glandular e possíveis anomalias. Os pixels identificados por esta máscara binária foram subsequentemente realçados nas etapas de \textit{denoising} e ajuste de brilho que se seguiram.
+
+\subsection*{Denoising por \textit{Wavelets — Hard Threshold}}
+
+A redução de ruído foi realizada utilizando a transformada \textit{wavelet} 2D com limiarização do tipo \textit{hard threshold}. Para avaliar a sensibilidade do método à escolha da família de \textit{wavelets}, foram testadas múltiplas famílias (incluindo Coiflet, Daubechies e Symlet). O cálculo do limiar seguiu a abordagem do limiar universal, utilizando a estimativa do desvio padrão do ruído ($\sigma$) calculada a partir da mediana dos coeficientes de detalhe (d) normalizada pela constante 0,6745.
+
+\begin{equation}
+\sigma = \frac{\text{mediana}(|d|)}{0,6745}
+\end{equation}
+
+Esta técnica:
+
+\begin{itemize}
+    \item Preserva bordas, microestruturas e detalhes morfológicos sutis relevantes para o diagnóstico;
+    \item Reduz ruído granular, artefatos de aquisição e variações indesejadas de iluminação;
+    \item Mantém a integridade das regiões não ruidosas e a coerência anatômica global da imagem mamográfica.
+\end{itemize}
+
+\subsection*{Ajuste de Brilho Local}
+
+Por fim, aplicou-se um aumento de brilho somente nas regiões claras previamente segmentadas, evitando alterações indesejadas no restante da mama. O ajuste utilizado foi de aproximadamente 35\%. Esse procedimento aumenta o contraste interno da mama sem causar saturação e contribui para realçar padrões estruturais importantes.
+
+\subsection{\textit{Data Augmentation}}\label{subsec:data_augmentation}
+
+Com o objetivo de aumentar a diversidade do conjunto de treinamento e reduzir o \textit{overfitting}, foram aplicadas transformações aleatórias apenas nas imagens da etapa de treino. As operações utilizadas foram:
+\begin{itemize}
+    \item Reflexão horizontal e vertical com probabilidade de 50\%;
+    \item Rotação aleatória no intervalo de $-15^\circ$ a $+15^\circ$.
+\end{itemize}
+
+A escolha dessas transformações deve-se ao fato de que elas preservam a anatomia mamária e introduzem variações realistas. Operações mais agressivas, como rotações grandes, foram evitadas por poderem gerar imagens fisicamente incoerentes. No conjunto de teste, nenhuma transformação aleatória foi aplicada; apenas a normalização padrão foi utilizada.
+
+\subsection{Procedimentos de Treinamento e Teste}\label{subsec:procedimentos_treinamento}
+
+O treinamento dos modelos foi realizado de forma padronizada para todas as arquiteturas avaliadas, garantindo comparabilidade entre os resultados. Inicialmente, o conjunto de dados foi dividido em 80\% para treino e 20\% para teste, mantendo a mesma proporção para todos os experimentos.
+
+\subsection*{Balanceamento do conjunto de treino}
+
+Como a base apresenta desbalanceamento entre as classes Normal e Anormal, foi empregado um \textit{Weighted Random Sampler}. Cada amostra recebeu um peso inversamente proporcional à frequência da sua classe, promovendo um processo de amostragem mais equilibrado durante o treinamento. Esse procedimento evita que o modelo seja enviesado para a classe majoritária e foi aplicado de forma uniforme a todas as arquiteturas.
+
+\subsection*{Configuração dos DataLoaders}
+
+No PyTorch, o \textit{DataLoader} é responsável por carregar as imagens durante o treinamento e organizá-las em pequenos grupos chamados batches, que são utilizados a cada atualização dos pesos da rede. O tamanho desses grupos é definido pelo parâmetro batch size.
+
+Os DataLoaders foram configurados com:
+
+\begin{itemize}
+    \item \textit{Batch size} de 16, definindo que cada iteração do treinamento utiliza um grupo de 16 imagens;
+    \item \textit{Sampler} balanceado no conjunto de treino, assegurando probabilidade proporcional entre as classes;
+    \item Ordem fixa no conjunto de teste, sem embaralhamento, garantindo reprodutibilidade.
+\end{itemize}
+
+Essa configuração garante que os modelos recebam \textit{minibatches} organizados de forma consistente e comparável entre todos os experimentos.
+
+\subsection*{Processo de treinamento}
+
+Todos os modelos foram treinados sob as mesmas condições:
+
+\begin{itemize}
+    \item Otimização: Adam (\textit{learning rate} = 0,001);
+    \item Função de perda: \textit{CrossEntropyLoss};
+    \item Número de épocas: 30.
+    
+\end{itemize}
+
+Durante cada época, o modelo percorreu todos os lotes do conjunto de treino, 
+executando o \textit{forward}, que consiste na passagem das imagens pela rede para 
+geração das predições. Em seguida, é realizado o cálculo da perda, a 
+retropropagação do erro e a atualização dos pesos. O valor médio da perda por 
+época foi registrado para monitoramento da convergência.
+
+\section{Implementação}
+
+A implementação foi realizada em Python 3.8+, utilizando o framework PyTorch 2.0 para construção e treinamento das redes neurais, e PyWavelets 1.4.1 para aplicação da decomposição wavelet multinível nas imagens. A reprodutibilidade é garantida pela disponibilização do código-fonte em repositório público no GitHub\footnote{\url{https://github.com/jessicac13/tcc}}
+
+, permitindo que os experimentos possam ser replicados por outros pesquisadores.
+
+\subsection*{Ambiente e Configurações Técnicas}
+
+O desenvolvimento foi conduzido no ambiente Google Colaboratory, que 
+disponibiliza uma GPU NVIDIA Tesla T4 com 16~GB de VRAM quando esse recurso 
+está habilitado na sessão. O \textit{PyTorch} realiza automaticamente a 
+detecção do dispositivo e utiliza a GPU para acelerar o treinamento; caso a GPU 
+não esteja disponível, a execução ocorre normalmente na CPU.
+
+
+
+\chapter{Resultados}\label{resultados}
+
+
+Nesta seção são apresentados os resultados quantitativos obtidos para todas as arquiteturas avaliadas: \textit{CNN} Simples, \textit{ResNet18}, \textit{ResNet34} e \textit{ResNet50}. Os valores reportados refletem o desempenho observado durante os experimentos e foram organizados em gráficos comparativos para facilitar a análise entre diferentes configurações e modelos.
+
+\section*{Visualização dos Resultados}
+
+A Figura~\ref{fig:acc} apresenta a acurácia das arquiteturas avaliadas.  
+As Figuras~\ref{fig:f1-normal} e \ref{fig:f1-anormal} exibem, respectivamente, os valores de \textit{F1-score} para as classes Normal e Anormal.
+
+As Figuras~\ref{fig:prec-normal} e \ref{fig:prec-anormal} mostram a precisão das duas classes, enquanto as Figuras~\ref{fig:rec-normal} e \ref{fig:rec-anormal} apresentam os respectivos valores de \textit{recall}.
+
+Por fim, as Figuras~\ref{fig:f1_macro} a \ref{fig:prec_ponderado} reúnem as métricas macro e ponderadas, permitindo uma visão consolidada do desempenho global.
+
+% ---------------- FIGURAS ----------------
+
+\begin{figure}[!h]
+    \caption{Acurácia para todas as arquiteturas}
+    \centering
+    \includegraphics[width=\textwidth]{figuras/GERAL_Accuracy.png}
+    \label{fig:acc}
+    \fonteproprioautor
+\end{figure}
+
+\begin{figure}[!h]
+    \caption{F1-score - Classe Normal}
+    \centering
+    \includegraphics[width=\textwidth]{figuras/GERAL_F1_Normal.png}
+    \label{fig:f1-normal}
+    \fonteproprioautor
+\end{figure}
+
+\begin{figure}[!h]
+    \caption{F1-score - Classe Anormal}
+    \centering
+    \includegraphics[width=\textwidth]{figuras/GERAL_F1_Anormal.png}
+    \label{fig:f1-anormal}
+    \fonteproprioautor
+\end{figure}
+
+\begin{figure}[!h]
+    \caption{Precisão - Classe Normal}
+    \centering
+    \includegraphics[width=\textwidth]{figuras/GERAL_Prec_Normal.png}
+    \label{fig:prec-normal}
+    \fonteproprioautor
+\end{figure}
+
+\begin{figure}[!h]
+    \caption{Precisão - Classe Anormal}
+    \centering
+    \includegraphics[width=\textwidth]{figuras/GERAL_Prec_Anormal.png}
+    \label{fig:prec-anormal}
+    \fonteproprioautor
+\end{figure}
+
+\begin{figure}[!h]
+    \caption{Recall - Classe Normal}
+    \centering
+    \includegraphics[width=\textwidth]{figuras/GERAL_Rec_Normal.png}
+    \label{fig:rec-normal}
+    \fonteproprioautor
+\end{figure}
+
+\begin{figure}[!h]
+    \caption{Recall - Classe Anormal}
+    \centering
+    \includegraphics[width=\textwidth]{figuras/GERAL_Rec_Anormal.png}
+    \label{fig:rec-anormal}
+    \fonteproprioautor
+\end{figure}
+
+% Figuras macro e ponderadas 
+
+\begin{figure}[!h]
+    \caption{F1-score - Macro}
+    \centering
+    \includegraphics[width=\textwidth]{figuras/GERAL_F1_Macro.png}
+    \label{fig:f1_macro}
+    \fonteproprioautor
+\end{figure}
+
+\begin{figure}[!h]
+    \caption{F1-score - Ponderado}
+    \centering
+    \includegraphics[width=\textwidth]{figuras/GERAL_F1_Weighted.png}
+    \label{fig:f1_ponderado}
+    \fonteproprioautor
+\end{figure}
+
+\begin{figure}[!h]
+    \caption{Recall - Macro}
+    \centering
+    \includegraphics[width=\textwidth]{figuras/GERAL_Rec_Macro.png}
+    \label{fig:recall_macro}
+    \fonteproprioautor
+\end{figure}
+
+\begin{figure}[!h]
+    \caption{Recall - Ponderado}
+    \centering
+    \includegraphics[width=\textwidth]{figuras/GERAL_Rec_Weighted.png}
+    \label{fig:recall_ponderado}
+    \fonteproprioautor
+\end{figure}
+
+\begin{figure}[!h]
+    \caption{Precisão - Macro.}
+    \centering
+    \includegraphics[width=\textwidth]{figuras/GERAL_Prec_Macro.png}
+    \label{fig:prec_macro}
+    \fonteproprioautor
+\end{figure}
+
+\begin{figure}[!h]
+    \caption{Precisão - Ponderado}
+    \centering
+    \includegraphics[width=\textwidth]{figuras/GERAL_Prec_Weighted.png}
+    \label{fig:prec_ponderado}
+    \fonteproprioautor
+\end{figure}
+
+
+
+\chapter{Discussões}\label{Discussão}
+
+Antes de apresentar a análise individual de cada arquitetura, é importante contextualizar as condições sob as quais os modelos foram avaliados. O conjunto de teste contém 42 imagens da classe Normal e 24 da classe Anormal, o que, embora represente um desbalanceamento moderado, é suficiente para influenciar as métricas da classe minoritária. Conforme descrito na metodologia, técnicas de amostragem ponderada foram empregadas para mitigar esse problema durante o treinamento. No entanto, mesmo com esse balanceamento, observou-se que vários modelos ainda apresentaram tendência a favorecer a classe Normal.
+
+Para as comparações entre configurações, adotou-se como referência o pré-processamento baseado na família \textit{Wavelet Coiflet}, já que essa família apresentou o melhor equilíbrio entre as classes, proporcionando redução de ruído e realce adequado das estruturas relevantes. Com isso, as análises que seguem são organizadas considerando quatro cenários para cada arquitetura: sem pré-processamento e sem \textit{data augmentation}, apenas com \textit{data augmentation}, apenas com pré-processamento \textit{Coiflet} e com a combinação de ambos.
+
+\section*{Modelo \textit{CNN} simples}
+
+O primeiro modelo avaliado foi uma \textit{CNN} simples, que obteve acurácia de aproximadamente 52\%. Embora a classe Normal apresente precisão de 61\% e recall de 67\%, esses valores não representam um desempenho satisfatório, pois em uma tarefa binária resultados próximos de 60\% ficam perigosamente próximos do comportamento aleatório. Já a classe Anormal apresentou desempenho ainda mais limitado (\textit{precision} de 30\% e \textit{recall} de 25\%), evidenciando forte incapacidade de identificar corretamente os casos minoritários. Esse desequilíbrio se reflete nos f1-scores (0{,}64 para Normal e 0{,}27 para Anormal), indicando que, apesar de reconhecer alguns padrões básicos, o modelo falha em alcançar um nível de confiabilidade mínimo para aplicações clínicas.
+
+Ao aplicar \textit{data augmentation}, observou-se uma melhora significativa na classe Anormal em termos de f1-score, embora acompanhada de queda na acurácia global. Isso indica que o aumento de variabilidade beneficia a generalização da classe minoritária ao reduzir o viés em direção à classe Normal. Ainda assim, o modelo não conseguiu atingir um equilíbrio satisfatório, reforçando a ideia de que a \textit{CNN} simples não é suficientemente expressiva para capturar adequadamente as nuances do problema.
+
+A introdução do pré-processamento baseado na \textit{wavelet Coiflet}, mesmo sem \textit{data augmentation}, gerou um salto expressivo de desempenho: acurácia de 0{,}65 e f1-score de 0{,}51 para a classe Anormal. Comparado ao modelo com \textit{data augmentation} sem pré-processamento (acurácia de 0{,}50 e f1-scores inferiores), fica claro que o pré-processamento foi o fator determinante para a melhoria do aprendizado.
+
+Combinando pré-processamento e \textit{data augmentation}, o modelo atingiu maior equilíbrio entre as classes, embora com acurácia moderada de 0{,}55. Houve perda de sensibilidade na classe Normal (recall de 0{,}38), mas um aumento expressivo na classe Anormal (recall de 0{,}83 e f1-score de 0{,}57, seu melhor até então). Isso demonstra que, após a limpeza e estruturação dos dados proporcionadas pela \textit{Coiflet}, a \textit{data augmentation} passou a atuar de forma mais eficaz, reforçando a capacidade de identificação da classe minoritária.
+
+\section*{Modelo ResNet18}
+
+O uso de arquiteturas mais profundas também trouxe ganhos importantes. A ResNet18 sem pré-processamento superou a \textit{CNN} simples, alcançando acurácia de 0{,}5606 e melhorias em todas as métricas. A classe Normal apresentou f1-score de 0{,}67 e a Anormal de 0{,}33, indicando avanço na extração de características mesmo sem qualquer tratamento adicional.
+
+Com \textit{data augmentation}, a ResNet18 atingiu acurácia de 51{,}5\%, e ainda apresentou desempenho muito distinto entre as classes: f1-score de 0{,}64 para Normal e apenas 0{,}27 para Anormal. Apesar do balanceamento por pesos, o modelo continuou tendo dificuldade para aprender padrões representativos da classe Anormal quando os dados são utilizados sem pré-processamento. Isso sugere que a variabilidade introduzida pela \textit{data augmentation}, aplicada sobre imagens brutas, não foi suficiente para melhorar a capacidade do modelo de distinguir características relevantes da classe minoritária.
+
+A inserção do pré-processamento \textit{Coiflet}, sem \textit{data augmentation}, evidenciou novamente que essa etapa é o fator mais determinante: a acurácia subiu para 0{,}62, e o f1-score da classe Anormal aumentou de 0{,}13 para 0{,}36. Esse salto indica que a transformação \textit{Wavelet} reduziu ruídos e tornou estruturas relevantes mais distinguíveis, facilitando o aprendizado mesmo com pesos balanceados.
+
+Com a combinação de pré-processamento e \textit{data augmentation}, a ResNet18 alcançou um de seus resultados mais equilibrados: acurácia de 0{,}64, com f1-scores de 0{,}71 para Normal e 0{,}52 para Anormal. Nessa configuração, a \textit{data augmentation} passou a atuar de forma benéfica, pois a entrada já havia sido estabilizada pelo pré-processamento. Assim, a variabilidade adicional não gerou inconsistências, mas contribuiu para melhorar a representação da classe Anormal sem comprometer significativamente o desempenho na classe Normal.
+
+\section*{Modelo ResNet34}
+
+A ResNet34 sem pré-processamento e sem \textit{data augmentation} apresentou acurácia de 0{,}61 com forte tendência à classe Normal (f1 = 0{,}72) e baixo desempenho para Anormal (f1 = 0{,}32). Ao aplicar apenas \textit{data augmentation}, o desempenho caiu severamente (acurácia 0{,}50), mostrando que dados não tratados tornam a \textit{data augmentation} prejudicial, introduzindo ruído e instabilidade.
+
+Quando aplicado o pré-processamento \textit{Coiflet}, o modelo atingiu seus melhores resultados: acurácia de 0{,}68 e equilíbrio muito superior (f1 = 0{,}75 para Normal e 0{,}57 para Anormal). Assim como nos modelos anteriores, o pré-processamento mostrou ser essencial para extrair padrões relevantes.
+
+Já a combinação pré-processamento + \textit{data augmentation} levou a uma queda acentuada no desempenho, com colapso total da classe Anormal (f1 = 0). A variabilidade artificial superou a capacidade da rede de manter separação entre as classes, evidenciando que a ResNet34 é mais sensível à \textit{data augmentation} e depende fortemente da limpeza fornecida pela \textit{Coiflet}.
+
+\section*{Modelo ResNet50}
+
+A ResNet50 sem pré-processamento e sem \textit{data augmentation} apresentou acurácia de 0{,}50 e grande desequilíbrio entre as classes. Com \textit{data augmentation} isolada, houve melhoria aparente na acurácia (0{,}58), mas a classe Anormal praticamente colapsou (f1 = 0{,}07). Isso mostra que a \textit{data augmentation} sem pré-processamento intensifica padrões da classe majoritária. O pré-processamento
+Novamente, com a aplicação do pré-processamento \textit{Coiflet}, observou-se a maior evolução: acurácia de 0{,}65, f1 da classe Normal de 0{,}74 e f1 da classe Anormal de 0{,}49 (valores superiores aos obtidos nas configurações anteriores). O pré-procedimento proporcionou estabilidade, redução de ruído e realce das estruturas relevantes, permitindo que a ResNet50 extraísse características de forma mais consistente.
+
+Com pré-processamento + \textit{data augmentation}, o desempenho manteve-se estável (acurácia de 0{,}65), com leve queda para a classe Anormal, mas sem os colapsos observados em arquiteturas menores. Isso indica que a ResNet50 tolera melhor o aumento de variabilidade quando os dados já chegam limpos e estruturados.
+
+
+\chapter{Conclusão }\label{Conclusão}
+
+Esta pesquisa avaliou o impacto da Transformada \textit{Wavelet} e de diferentes arquiteturas de redes neurais convolucionais na detecção de nódulos em mamografias da base Mini-MIAS. Os resultados mostraram que o pré-processamento com a \textit{Wavelet Coiflet} foi a etapa que mais contribuiu para a melhoria do desempenho dos modelos, equilibrando as classes e destacando estruturas relevantes para a classificação. As arquiteturas \textit{ResNet} apresentaram desempenho mais consistente que a \textit{CNN} simples, com destaque para a \textit{ResNet34} combinada ao pré-processamento, que obteve os melhores resultados gerais.
+
+De modo geral, observou-se que a qualidade das imagens de entrada influencia mais o desempenho dos modelos do que a aplicação isolada de técnicas de \textit{data augmentation}. Além disso, algumas combinações entre \textit{Wavelet} e aumento de dados mostraram sensibilidade dependendo da arquitetura utilizada. Esses achados reforçam a importância de estratégias adequadas de pré-processamento e do uso de modelos mais profundos em bases pequenas e desbalanceadas como a Mini-MIAS.
+
+\section{Trabalhos Futuros}
+
+Como continuidade deste estudo, sugerem-se:
+
+\begin{itemize}
+    \item Investigar a integração da \textit{Wavelet} diretamente na pipeline da \textit{CNN}, por meio de camadas \textit{Wavelet-CNN}, permitindo que a decomposição multiescala seja aprendida conjuntamente durante o treinamento.
+    \item Avaliar o método em bases maiores e mais balanceadas, a fim de verificar a capacidade de generalização dos modelos.
+    \item Explorar outras arquiteturas de \textit{CNN}, como EfficientNet, VGG e AlexNet.
+\end{itemize}

@@ -1,0 +1,41 @@
+\chapter{Introdução}\label{cap:introducao}
+
+O câncer de mama permanece como a principal causa de mortalidade por câncer entre mulheres em todo o mundo, sendo responsável por um grande número de óbitos em diversos países \cite{cadrin2023unleashing,SECHOPOULOS2021214}. Apesar dos avanços em métodos de triagem e tratamento, a detecção precoce ainda enfrenta desafios consideráveis, como a variabilidade na interpretação dos exames por profissionais de saúde e a ocorrência de falsos positivos, que podem gerar ansiedade e procedimentos desnecessários para as pacientes.
+
+Nesse cenário, a inteligência artificial (IA) tem se mostrado uma ferramenta promissora no apoio ao diagnóstico do câncer de mama. A utilização de redes neurais convolucionais (CNN), por exemplo, para a detecção de anomalias de forma automática, juntamente com uma avaliação médica, contribui para evitar procedimentos desnecessários, minimizar o impacto psicológico nas pacientes e otimizar os recursos do sistema de saúde \cite{SECHOPOULOS2021214,cadrin2023unleashing}.
+
+Para que seja possível utilizar redes neurais na detecção de anormalidades em um exame de mama, é necessário treiná-las previamente. Esse processo envolve fornecer uma grande quantidade de imagens já classificadas, permitindo que a rede aprenda a reconhecer padrões específicos associados. O intuito é de que após esse treinamento, a rede seja capaz de analisar uma nova imagem e fazer uma previsão com base no conhecimento adquirido. Entretanto, treinar redes neurais do zero exige muitos dados rotulados e alto poder computacional. Para contornar essas limitações, utiliza-se o \textit{Transfer Learning}, que reaproveita redes já treinadas em grandes bases, permitindo bons resultados mesmo com poucos dados e infraestrutura reduzida \cite{ISIN2017268}.
+
+
+Além disso, as imagens precisam passar por um pré-processamento. Essa etapa é necessária para que as imagens estejam em um formato e qualidade que
+facilite a extração de informações relevantes pelos algoritmos. Uma das técnicas utilizadas nesse processo é a Transformada \textit{Wavelet}, que permite decompor a imagem em níveis de resoluções diferentes \cite{leite2018analise}. Isso facilita a identificação de detalhes sutis, como microcalcificações e
+bordas de nódulos, ao mesmo tempo em que reduz ruídos indesejados. Dessa forma, o uso da \textit{Wavelet} contribui para tornar os dados mais adequados ao aprendizado da rede neural, aumentando a eficiência na detecção de padrões
+associados ao câncer de mama.
+
+Diante desse cenário, esta pesquisa tem como objetivo treinar tanto uma arquitetura convolucional simples, desenvolvida do zero, quanto modelos baseados em \textit{Transfer Learning} para a detecção de anomalias em imagens de mamografia utilizando uma base de dados pública. Este trabalho de conclusão de curso compara o desempenho dessas abordagens com e sem a aplicação da Transformada \textit{Wavelet} como técnica de pré-processamento, além de avaliar o impacto do uso de \textit{data augmentation}, entendida como o conjunto de transformações aplicadas às imagens (como rotações, espelhamentos e variações de escala) com o objetivo de aumentar a diversidade dos dados disponíveis para treinamento. A proposta é verificar se a aplicação da \textit{Wavelet} e das técnicas de aumento de dados contribui para melhorar a acurácia dos modelos, facilitando a identificação de padrões relevantes e auxiliando na detecção precoce do câncer de mama.
+
+\section{Objetivos gerais}
+Desenvolver e comparar algoritmos para detecção automática de nódulos mamários em mamografias, integrando a decomposição \textit{Wavelet} multinível como técnica de pré-processamento e diferentes arquiteturas de redes neurais convolucionais, incluindo modelos treinados do zero e com \textit{Transfer Learning}, implementados em Python. O objetivo é investigar se a aplicação da \textit{Wavelet} e do \textit{data augmentation} contribui para elevar a precisão diagnóstica, avaliando o impacto de cada estratégia no desempenho das redes.
+\section{Objetivos específicos}
+
+\begin{itemize}
+    
+    \item Selecionar e pré-processar imagens de mamografia provenientes da base pública \textit{Mini-MIAS}.
+    
+    \item Implementar um algoritmo de decomposição \textit{Wavelet} para destacar padrões relevantes nas imagens e reduzir ruídos.
+    
+    \item Aplicar técnicas de \textit{data augmentation}, compreendidas como transformações geométricas e fotométricas que aumentam a variabilidade das imagens disponíveis para o treinamento.
+    
+    \item Treinar redes neurais convolucionais (CNNs) nas arquiteturas ResNet-18, ResNet-34 e ResNet-50 com o uso de \textit{Transfer Learning}.
+    
+    \item Avaliar o desempenho do modelo em diferentes cenários de entrada (com e sem \textit{Wavelet}, com e sem \textit{data augmentation}), utilizando métricas como acurácia, precisão, recall e F1-score.
+    
+    \item Comparar os resultados obtidos para verificar o impacto das estratégias de pré-processamento e aumento de dados na detecção automática de nódulos mamários.
+
+\end{itemize}
+
+
+
+% \section{Organização do texto}
+
+% O texto está organizado da seguinte forma: No \autoref{cap:revisao} é apresentado um pouco mais de como fazer um outro capítulo, apresentando ainda formas para inserir figuras. No \autoref{cap:proposta} é apresentado uma forma para adicionar uma tabela. Por fim, no \autoref{cap:conclusoes} são apresentadas as conclusões sobre este trabalho.

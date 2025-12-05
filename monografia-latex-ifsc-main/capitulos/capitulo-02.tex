@@ -1,0 +1,390 @@
+\chapter{Fundamentação teórica}\label{cap:fund-teorica}
+A proposta desta pesquisa, é realizar a detecção de nódulos mamários em mamografias por meio de uma rede neural convolucional. Nesse processo, as imagens passam inicialmente por uma etapa de pré-processamento com a Transformada \textit{Wavelet}, aplicada para remoção de ruído (\textit{denoising}), antes de serem processadas pela CNN. Assim, nessa seção é explanado os principais tópicos para alcançar os objetivos pretendidos.
+
+\section{Câncer de mama}\label{sec:Câncer de mama}
+
+Esse tipo de câncer pode se desenvolver a partir de alterações nas células dos lóbulos e ductos mamários. Inicialmente, essas alterações podem incluir um crescimento exagerado de células (hiperplasia) ou um padrão anormal de crescimento (hiperplasia atípica). Com o tempo, podem evoluir para uma forma localizada da doença, que ainda não se espalhou para os tecidos vizinhos (carcinoma in situ), e depois para uma forma mais agressiva, que invade os tecidos ao redor (carcinoma invasivo).Um dos sinais visíveis da doença é a pele da mama ficar parecida com uma casca de laranja, por causa do inchaço. Além disso, também é comum sentir caroços (linfonodos aumentados) na axila \cite{Bravo_Lopes_Tijolin_Nunes_Lenhani_Junior_Ceranto_2021}.
+
+O câncer de mama é a principal causa de mortalidade por câncer entre mulheres em todo o mundo, com sua incidência influenciada por fatores genéticos, hormonais e de estilo de vida. A detecção precoce da doença é fundamental para aumentar as chances de cura e reduzir a mortalidade, sendo geralmente realizada por meio de exames de imagem, como a mamografia, que permite identificar alterações suspeitas ainda em estágios iniciais \cite{cadrin2023unleashing,SECHOPOULOS2021214}. Entre os elementos observados nas mamografias, destacam-se o tamanho do tumor e o envolvimento dos gânglios axilares, fatores que auxiliam na definição da conduta clínica, como a necessidade de quimioterapia ou cirurgia de retirada \cite{Bravo_Lopes_Tijolin_Nunes_Lenhani_Junior_Ceranto_2021}. Além disso, a forma e o contorno dos nódulos também são considerados: nódulos com formato oval, bordas bem definidas e aspecto regular tendem a ser benignos, enquanto alterações irregulares podem indicar malignidade \cite{PassigSilva2022}
+
+\section{Mamografia digital}\label{sec:Mamografia}
+
+A mamografia digital é uma técnica avançada de diagnóstico por imagem utilizada para detectar alterações no tecido mamário, com ênfase na identificação precoce do câncer de mama. Diferente da mamografia convencional, que utiliza filmes radiográficos, a versão digital emprega detectores eletrônicos para capturar a radiação transmitida pela mama, convertendo-a em sinais digitais. Esses sinais são processados por algoritmos computacionais, permitindo ajustes precisos de brilho, contraste e ampliação da imagem (\autoref{fig:mamografia}), sem a necessidade de nova exposição à radiação \cite{Freitas2006}.
+
+\begin{figure}[ht]
+	\centering
+	\caption{Mamografia digital demonstrando nódulo espiculado avaliado com recursos de pós-processamento}\label{fig:mamografia}
+
+	\begin{subfigure}[t]{.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/mamografiaA.png}
+        \caption{Ampliação}\label{fig:mamografiaA}
+    \end{subfigure}
+    \begin{subfigure}[t]{.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/mamografiaB.png}
+        \caption{Ampliação e inversão do contraste }\label{fig:mamografiaB}
+    \end{subfigure}
+    \fonte{\cite{Freitas2006}.}
+\end{figure}
+
+\subsection{Mama}\label{subsec:mama}
+
+A mama é formada por diferentes tipos de tecido, como o tecido gorduroso (adiposo), o tecido fibroglandular e os ductos que transportam o leite. Nas imagens de mamografia, o tecido gorduroso aparece mais claro, enquanto o tecido fibroglandular aparece mais escuro (observa-se em \autoref{fig:mamografiaAnatomica}), o que ajuda a identificar diferentes áreas da mama. A quantidade desses tecidos varia de mulher para mulher, o que pode influenciar na visualização das imagens e na detecção de possíveis alterações \cite{sousa2017desenvolvimento}.
+\newpage
+\begin{figure}[ht]
+	\centering
+	\caption{Representação anatômica e radiológica da mama}\label{fig:mamografiaAnatomica}
+
+	\begin{subfigure}[t]{.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/mama.png}
+        \caption{Estruturas que compõem a mama}\label{fig:mama}
+    \end{subfigure}
+    \begin{subfigure}[t]{.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/mamografia.png}
+        \caption{Imagem radiológica da mama}\label{fig:mamografiaANA}
+    \end{subfigure}
+    \fonte{\cite{sousa2017desenvolvimento}.}
+\end{figure}
+
+Devido à variação de densidade mamária entre as pacientes, o sistema BI-RADS (\textit{Breast Imaging Reporting and Data System}) propôs uma classificação padronizada que descreve o grau de densidade observado nas imagens mamográficas. Essa categorização auxilia radiologistas na avaliação da qualidade da imagem e na estimativa da possibilidade de lesões não serem visualizadas, contribuindo diretamente para a conduta clínica e o acompanhamento da paciente.
+
+O BI-RADS classifica a densidade mamária em quatro categorias:
+\begin{itemize}
+    \item \textbf{A}: mama composta quase inteiramente por gordura;
+    \item \textbf{B}: presença de áreas dispersas de tecido fibroglandular;
+    \item \textbf{C}: mama heterogeneamente densa, podendo ocultar pequenas lesões;
+    \item \textbf{D}: mama extremamente densa, com maior risco de mascaramento de alterações.
+\end{itemize}
+
+Na \autoref{fig:densidades}, observa-se que mamas com maior proporção de tecido gorduroso tendem a facilitar a identificação de nódulos, uma vez que o contraste entre estruturas é mais evidente. Por outro lado, em mamas densas, a sobreposição de tecidos pode dificultar a detecção de alterações sutis, o que representa um desafio diagnóstico em exames mamográficos \cite{sousa2017desenvolvimento}.
+
+
+\begin{figure}[ht]
+	\centering
+	\caption{Classificação das densidades mamárias (A a D) segundo o sistema BI-RADS}\label{fig:densidades}
+	\includegraphics[width=15cm]{figuras/densidade.png}
+    \fonte{\cite{sousa2017desenvolvimento}.}
+\end{figure}
+\newpage
+\section{Limiarização}\label{sec:limiarizacao}
+
+Uma das técnicas de processamento de imagem utilizada para o tratamento de imagens mamográficas é a limiarização, que consiste em aplicar um valor limite (limiar) para separar os pixels importantes do fundo em uma imagem. Pixels com intensidade igual ou superior ao limiar recebem valor 1, e os demais, 0, gerando uma imagem binária. Multiplicando essa imagem binária pelos valores originais, mantém-se apenas os pixels relevantes, eliminando o fundo \cite{PassigSilva2022}. A seguir, apresenta-se um exemplo prático de limiarização:
+
+\begin{equation}
+I =
+\begin{bmatrix}
+10 & 50 & 200 \\
+30 & 100 & 180 \\
+20 & 40 & 220 \\
+\end{bmatrix}, \quad
+T = 100
+\end{equation}
+
+\begin{equation}
+B(x,y) =
+\begin{bmatrix}
+0 & 0 & 1 \\
+0 & 1 & 1 \\
+0 & 0 & 1 \\
+\end{bmatrix}, \quad
+B(x,y) =
+\begin{cases}
+1, & I(x,y) \geq T \\
+0, & \text{caso contrário}
+\end{cases}
+\end{equation}
+
+\begin{equation}
+I'(x,y) = I(x,y) \times B(x,y) =
+\begin{bmatrix}
+0 & 0 & 200 \\
+0 & 100 & 180 \\
+0 & 0 & 220 \\
+\end{bmatrix}
+\end{equation}
+
+
+onde \(I\) é a matriz da imagem original contendo os valores de intensidade dos pixels, \(T\) é o limiar definido para separar o fundo dos objetos de interesse, \(B\) é a imagem binária resultante da aplicação do limiar, e \(I'\) é a imagem final obtida após a multiplicação elemento a elemento, que mantém apenas os pixels com intensidade igual ou superior a \(T\).
+
+Embora uma imagem não tenha variação temporal (como um sinal de áudio, por exemplo), ela possui variações espaciais na intensidade dos pixels que podem ser interpretadas em termos de frequência. Áreas com transições suaves correspondem a baixas frequências, enquanto detalhes, bordas ou texturas correspondem a altas frequências. Por isso, técnicas como a Transformada Wavelet (\autoref{subsec:Transformada Wavelet}) podem ser aplicadas a imagens para decompor essas variações em diferentes escalas, permitindo destacar padrões importantes e reduzir ruídos, o que facilita a extração de informações relevantes para etapas posteriores de processamento.
+
+\section{Transformada \textit{Wavelet}}\label{subsec:Transformada Wavelet}
+
+A Transformada \textit{Wavelet} surge como uma solução para uma limitação da Transformada de Fourier. Ambas têm como objetivo representar um sinal no domínio do tempo e no domínio da frequência. No entanto, a Transformada de \textit{Fourier} não permite identificar em que momento uma determinada frequência ocorre, fazendo com que a sua aplicação torne-se limitada na análise de sinais com variações ao longo do tempo (não estacionários) \cite{Domingues2016}.
+
+A \autoref{fig:sinal} ilustra um sinal no domínio do tempo, composto por uma frequência de 200 Hz no intervalo entre 0 e 0.5 segundos, e por uma frequência de 50 Hz a partir de 0.5 segundos.
+
+\begin{figure}[ht]
+	\centering
+	\caption{Sinal no domínio do tempo com mudança de frequência}\label{fig:sinal}
+	\includegraphics[width=15cm]{figuras/sinal.png}
+    \fonteproprioautor
+\end{figure}
+
+Ao aplicar a Transformada Rápida de \textit{Fourier} ao sinal, obtém-se a representação no domínio da frequência (\autoref{fig:fft}). Embora ela revele as frequências presentes, não indica em que momento essas frequências ocorrem no sinal.
+
+\begin{figure}[ht]
+	\centering
+	\caption{Transformada Rápida de \textit{Fourier} do sinal: ausência de localização temporal}\label{fig:fft}
+	\includegraphics[width=15cm]{figuras/fft.png}
+    \fonteproprioautor
+\end{figure}
+
+Para contornar essa limitação e extrair informações simultaneamente no tempo e na frequência, é necessário adotar uma abordagem diferente, como o janelamento do sinal \cite{Domingues2016}, o que leva ao uso da Transformada \textit{Wavelet}. Embora sua fundamentação seja semelhante à da Transformada Rápida de \textit{Fourier} (FFT), a Transformada \textit{Wavelet} difere ao decompor o sinal não em senóides, mas em funções \textit{wavelets} (ondas de curta duração que se atenuam rapidamente). Isso permite capturar eventos transitórios e mudanças abruptas com maior precisão. As \textit{wavelets} são funções localizadas tanto no tempo, por meio de translações, quanto na frequência ou escala, por meio de dilatações, possibilitando uma análise mais refinada de sinais não estacionários.
+
+A \autoref{fig:cwt} mostra o espectrograma gerado pela aplicação da Transformada \textit{Wavelet} Contínua (CWT, do inglês \textit{Continuous Wavelet Transform}) ao sinal. É possível observar não apenas as frequências presentes, mas também os momentos em que elas ocorrem, evidenciando a vantagem da análise conjunta no tempo e na frequência.
+
+\begin{figure}[ht]
+	\centering
+	\caption{Espectrograma da Transformada \textit{Wavelet} Contínua: análise tempo-frequência}\label{fig:cwt}
+	\includegraphics[width=15cm]{figuras/cwt.png}
+    \fonteproprioautor
+\end{figure}
+
+A Transformada \textit{Wavelet} Contínua de uma função $x(t) \in L^2(\mathbb{R})$ pode ser definida conforme a Equação~\ref{eq:cwt}. Nessa expressão, o parâmetro \( a \) representa o \textit{fator de dilatação} (ou escala), \( b \) é o \textit{deslocamento temporal} (ou translação), e \( \psi \) é a \textit{wavelet mãe} \cite{Goswami1999}.
+
+\begin{equation}
+W_{\psi,x}(a, b) = \frac{1}{\sqrt{|a|}} \int_{-\infty}^{\infty} x(t) \, \psi\left( \frac{t - b}{a} \right) dt
+\label{eq:cwt}
+\end{equation}
+
+\subsection*{\textit{Wavelets} mães}\label{subsubsec: Wavelets-mães}
+
+
+Na Transformada \textit{Wavelet}, as funções \textit{wavelets} são obtidas a partir de uma função geradora, sendo denominada como \textit{wavelet} mãe. As \textit{Wavelets} mães são sinais que ao serem deslocados, multiplicados, ou outras transformações, formam uma família \cite{PassigSilva2022}. Dentre as famílias de \textit{wavelets} mais conhecidas estão a \textit{Coiffet, Daubechies, Haar, Biorthogonal} e \textit{Morlet} e \textit{Mexican Hat} (Chapéu Mexicano), que são ilustradas na \autoref{fig:familias}
+
+\begin{figure}[ht]
+	\centering
+	\caption{Funções \textit{wavelets} comuns}\label{fig:familias}
+	\includegraphics[width=13cm]{figuras/familias.png}
+    \fonteproprioautor
+\end{figure}
+
+
+Tem-se que a \textit{wavelet} mãe apresentada na Equação~\ref{eq:cwt} deve satisfazer duas condições essenciais \cite{Magrini2020}:  
+\begin{itemize}
+    \item Ter valor médio nulo (Equação~\ref{eq:valor-medio-nulo});
+    \item Possuir energia finita (Equação~\ref{eq:energia-finita}).
+\end{itemize}
+
+\begin{equation}
+\int_{-\infty}^{\infty} \psi(t) \, dt = 0
+\label{eq:valor-medio-nulo}
+\end{equation}
+
+\begin{equation}
+\int_{-\infty}^{\infty} |\psi(t)|^2 \, dt < \infty
+\label{eq:energia-finita}
+\end{equation}
+
+\subsection*{Transformada \textit{Wavelet} Discreta}\label{subsubsec:Transformada Wavelet Discreta}
+
+A Transformada \textit{Wavelet} Discreta (DWT, do inglês \textit{Discrete Wavelet Transform}) é construída a partir da discretização dos parâmetros de escala e translação utilizados na Transformada \textit{Wavelet} Contínua (CWT). Essa discretização permite reescrever a integral da CWT como uma soma discreta \cite{Goswami1999}. A \autoref{eq:dwt-series} descreve esta discretização do sinal:
+
+\begin{equation}
+f[n] = \sum_{k=-\infty}^{\infty} c_{j,k} \, \phi_{j,k}[n] + \sum_{j=0}^{\infty} \sum_{k=-\infty}^{\infty} d_{j,k} \, \psi_{j,k}[n]
+\label{eq:dwt-series}
+\end{equation}
+
+O sinal $f[n]$ pode ser decomposto a partir de duas funções base fundamentais: as funções escalares $\phi_{j,k}[n]$, que representam as componentes de aproximação associadas às baixas frequências, e as funções \textit{wavelet} mãe $\psi_{j,k}[n]$, que representam as componentes de detalhe associadas às altas frequências \Cite{PassigSilva2022}.
+Essa decomposição depende diretamente dos parâmetros $j$ e $k$. O parâmetro $j \in \mathbb{Z}$ representa o \textit{nível de escala}: valores mais altos de $j$ produzem \textit{wavelets} mais dilatadas, capazes de capturar tendências globais (baixas frequências), enquanto valores menores de $j$ geram \textit{wavelets} mais comprimidas, adequadas para identificar variações rápidas (altas frequências). Já o parâmetro $k \in \mathbb{Z}$ determina a \textit{posição temporal} da análise, controlando onde cada função base é aplicada ao sinal; ao variar $k$, varre-se o sinal no tempo para localizar eventos locais.
+
+Por fim, essa representação é quantificada pelos coeficientes associados a cada função base: $c_{J,k}$ corresponde aos coeficientes de aproximação no nível mais baixo (mais grosseiro), enquanto $d_{j,k}$ representa os coeficientes de detalhe associados a cada nível $j$.
+
+
+\subsubsection*{Cálculo de $\phi_{j,k}[n]$ e $\psi_{j,k}[n]$}
+
+As funções \( \phi_{j,k}[n] \) e \( \psi_{j,k}[n] \) são versões escaladas e transladadas das funções \( \phi[n] \) (função escalar) e \( \psi[n] \) (função \textit{wavelet} mãe) \cite{PassigSilva2022}, definidas da seguinte forma:
+
+\begin{align}
+\phi_{j,k}[n] &= a_0^{-j/2} \cdot \phi\left( \frac{n - k b_0 a_0^j}{a_0^j} \right) \\
+\psi_{j,k}[n] &= a_0^{-j/2} \cdot \psi\left( \frac{n - k b_0 a_0^j}{a_0^j} \right)
+\end{align}
+
+\noindent 
+onde fator \( a_0^{-j/2} \) garante a normalização da energia das funções em diferentes escalas \cite{Goswami1999}. O termo \( a_0^j n \) realiza a dilatação (controlando a frequência), sendo o equivalente ao \(a\) da CWT, enquanto \( k b_0 a_0^j\) define a translação no tempo (controlando a posição da análise), equivalente ao \(b\) da CWT. Deste modo, a DWT é formalmente definida como \autoref{eq:def-formal-dwt}, o que permite a decomposição do sinal em níveis de resolução, separando componentes de baixa frequência (aproximação) e de alta frequência (detalhe).
+
+
+\begin{align}
+W_f(j, k) &= \sum_{n=-\infty}^{\infty} f[n] \cdot \psi_{j,k}[n] \notag \\
+         &= \sum_{n=-\infty}^{\infty} f[n] \cdot a_0^{-j/2} \, \psi\left( \frac{n - k b_0 a_0^j}{a_0^j} \right) \quad;~a_0 > 1; b_0 \neq 0.
+\label{eq:def-formal-dwt}
+\end{align}
+
+\subsection*{Banco de filtros}\label{subsubsec: Banco de filtros}
+
+A Transformada \textit{Wavelet} Discreta pode ser implementada de maneira eficiente por meio de um banco de filtros digital, estrutura conhecida como \textit{Fast Wavelet Transform} (FWT). Esse método evita a construção explícita das funções \( \phi_{j,k}[n] \) e \( \psi_{j,k}[n] \), ao calcular diretamente os coeficientes de aproximação e de detalhe a partir de operações de filtragem e subamostragem.
+
+O procedimento consiste em aplicar dois filtros ao sinal: um filtro passa-baixa (\(\bar{h}\)), que preserva as componentes de baixa frequência, e um filtro passa-alta (\(\bar{g}\)), que isola as componentes de alta frequência. Após a filtragem, realiza-se a subamostragem (redução pela metade da taxa de amostragem), o que resulta nos coeficientes de aproximação e de detalhe para aquele nível de análise \cite{Magrini2020}.
+
+Esse processo pode ser repetido recursivamente sobre os coeficientes de aproximação, permitindo a decomposição do sinal em múltiplos níveis de resolução. A estrutura do banco de filtros, composta pelas etapas de decomposição e reconstrução, é ilustrada na \autoref{fig:bancoFiltros}.
+
+\begin{figure}[ht]
+	\centering
+	\caption{Representação em diagrama de blocos da FWT}\label{fig:bancoFiltros}
+	\includegraphics[width=15cm]{figuras/bancoFiltros.png}
+    \fonte{\cite{Magrini2020}.}
+\end{figure}
+
+Essa abordagem é amplamente utilizada em aplicações reais, como compressão de sinais, análise de transientes e remoção de ruído, por ser computacionalmente eficiente.
+
+
+\subsection*{\textit{Wavelet denoising}}\label{Wavelet denoising}
+O processo de remoção de ruídos utilizando a Transformada \textit{Wavelet} consiste basicamente em três etapas principais \cite{PassigSilva2022}:
+
+\begin{enumerate}
+    \item \textbf{Decomposição:} O sinal original \( x \) é decomposto em coeficientes \textit{wavelet} \( C \) através da transformada wavelet, conforme a Equação~\eqref{eq:decomposicao}:
+    \begin{equation}
+    C = W(x)
+    \label{eq:decomposicao}
+    \end{equation}
+
+    \item \textbf{Limiarização:} Aplica-se um operador \( D(C, \alpha) \), que realiza a remoção do ruído por meio da limiarização dos coeficientes, onde \( \alpha \) é o limiar definido para distinguir ruído de sinal significativo, conforme a Equação~\eqref{eq:limiarizacao}:
+    \begin{equation}
+    C_d = D(C, \alpha)
+    \label{eq:limiarizacao}
+    \end{equation}
+
+Segundo \textcite{Mupparaju2013}, podemos definir o limiar universal (ou VisuShrink) \( \alpha \) como:
+    \begin{equation}
+    \alpha = \sigma \sqrt{2 \log P}
+    \label{eq:visu}
+    \end{equation}
+    onde \( \sigma \) é a variância do ruído e \( P \) é o número total de pixels da imagem. Apesar de simples, esse método tende a produzir uma estimativa excessivamente suavizada quando \( P \) é grande.
+
+    Além disso, a limiarização pode ser aplicada de duas formas:
+
+    \begin{itemize}
+        \item \textbf{\textit{Hard thresholding} (Limiar rígido):}
+        \begin{equation}
+        T_{hard}(d, \lambda) = d \cdot \mathbf{1}(|d| > \lambda)
+        \label{eq:hard}
+        \end{equation}
+
+        \item \textbf{\textit{Soft thresholding} (Limiar suave):}
+        \begin{equation}
+        T_{soft}(d, \lambda) = \mathrm{sign}(d) \cdot (|d| - \lambda)_+
+        \label{eq:soft}
+        \end{equation}
+    \end{itemize}
+    onde \( d \) representa o coeficiente de detalhe do sinal e \( \lambda \) o limiar aplicado.
+
+    \item \textbf{Reconstrução:} Por fim, a transformada \textit{wavelet} inversa é aplicada aos coeficientes limiarizados para obter o sinal \textit{denoised} \( s(t) \), conforme a Equação~\eqref{eq:reconstrucao}:
+    \begin{equation}
+    s(t) = W^{-1}(C_d)
+    \label{eq:reconstrucao}
+    \end{equation}
+\end{enumerate}
+
+O nível de decomposição, ou seja, a quantidade de vezes que o sinal é subdividido em componentes de alta e baixa frequência, também influencia o resultado do \textit{denoising}, podendo afetar a preservação do sinal original.
+
+
+\section{Redes neurais convolucionais}\label{Redes neurais convolucionais}
+
+As Redes Neurais Convolucionais (CNNs, do inglês \textit{Convolutional Neural Networks}) constituem uma arquitetura específica de redes neurais profunda que incorpora a operação matemática de convolução em pelo menos uma de suas camadas  \cite{Rosa2025}. Essa abordagem favorece a extração eficiente de padrões espaciais e estruturais dos dados de entrada \cite{Miyazaki2017}. Ao abordar imagens como objetos de entrada, (que podem ser compreendidas como uma grade bidimensional de pixels) as CNNs se demonstram adequadas \cite{Cunha2020}.
+
+De forma geral, a arquitetura de uma \textit{CNN} segue um fluxo bem definido: os dados de entrada (como uma imagem) passam por camadas convolucionais, que extraem características locais; em seguida, por camadas de \textit{pooling}, que reduzem a dimensionalidade; depois, por camadas totalmente conectadas (\textit{fully connected}), responsáveis pela tomada de decisão com base nas características extraídas; até, finalmente, gerar a saída \cite{Miyazaki2017}. A \autoref{fig:arquiteturaCNN} ilustra esse processo de forma simplificada.
+
+\begin{figure}[ht]
+	\centering
+	\caption{Arquitetura de uma Rede Neural Convolucional}\label{fig:arquiteturaCNN}
+	\includegraphics[width=11cm]{figuras/arquiteturaCNN.png}
+    \fonte{\cite{SilvaJunior2022}.}
+\end{figure}
+
+\newpage
+\subsection{Neurônios (\textit{Perceptrons})}\label{subsec:Neurônios}
+
+Para compreendermos o funcionamento das redes neurais profunda, é essencial entender primeiro o que faz um único neurônio (perceptrons). Sua função é receber uma ou mais entradas, calcular uma combinação linear ponderada dessas entradas com base em pesos associados e, em seguida, aplicar uma função de ativação para gerar uma saída, conforme mostra a \autoref{fig:neuronio}. Geometricamente, esse processo define um hiperplano no espaço das entradas, que serve para separar os dados conforme suas classes ou características.
+
+\begin{figure}[ht]
+	\centering
+	\caption{Modelo matemático de um neurônio}\label{fig:neuronio}
+	\includegraphics[width=11cm]{figuras/modeloNeuronio.png}
+    \fonte{\cite{Ferneda2006}.}
+\end{figure}
+
+Na \autoref{fig:hiperplano}, os pesos atribuídos são \( w_1 = -0{,}40 \), \( w_2 = 0{,}90 \), e o \(bias\) é \( b = 0{,}00 \). A equação resultante do hiperplano é:
+\[
+-0{,}40x + 0{,}90y + 0{,}00 = 0
+\]
+Os pontos azuis representam a classe positiva, enquanto os vermelhos indicam a classe negativa. Essa visualização ilustra como os pesos e o bias afetam diretamente a fronteira de decisão.
+
+\newpage
+
+\begin{figure}[ht]
+	\centering
+	\caption{Fronteira de separação do neurônio de entrada}\label{fig:hiperplano}
+	\includegraphics[width=6cm]{figuras/hiperplano.png}
+    \fonte{\cite{MayorMartinsPerceptron}.}
+\end{figure}
+
+Em redes neurais com múltiplos neurônios, cada um define seu próprio hiperplano. A combinação desses hiperplanos permite que a rede realize decisões mais complexas, separando dados de maneira mais precisa mesmo em casos em que as classes não são linearmente separáveis.
+
+
+\subsection{Rede Neural}\label{subsec:redes-neurais}
+
+Chamamos de rede neural quando há mais de um neurônio trabalhando em conjunto para realizar decisões. Existem diversas topologias possíveis, como por exemplo: \textit{single-layer} (camada única), \textit{two-layer} (duas camadas), \textit{three-layer} (três camadas), entre outras configurações, dependendo da complexidade da tarefa a ser resolvida, conforme observa-se na \autoref{fig:layers}.
+
+\begin{figure}[ht]
+	\centering
+	\caption{Topologias de Rede Neural}\label{fig:layers}
+	\includegraphics[width=10cm]{figuras/layers (1).png}
+    \fonte{Adaptada de \citeauthor*{very_neural_network}.}
+\end{figure}
+
+\newpage
+\subsubsection*{Rede Neural Profunda}\label{subsubsec:profunda}
+
+Quando se forma uma estrutura em que os neurônios são organizados em multiplas camadas, tem-se uma rede neural profunda (DNN, do inglês \textit{Deep Neural Network}), como mostrado na \autoref{fig:camadas}. Esse tipo de rede permite o processamento hierárquico dos dados, em que cada camada utiliza as saídas da anterior para extrair informações mais complexas.
+
+\begin{figure}[ht]
+	\centering
+	\caption{Rede neural profunda}\label{fig:camadas}
+	\includegraphics[width=8cm]{figuras/camadas.png}
+    \fonte{\cite{Rosa2025}.}
+\end{figure}
+
+
+\subsection{Convolução}\label{subsec:convolucao}
+
+A principal camada de uma Rede Neural Convolucional é a camada de Convolução. No contexto de uma convolução 2D (aplicada a imagens não coloridas), a imagem de entrada é representada como uma matriz de pixels e processada por um pequeno filtro, conhecido como \textit{kernel}. Esse \textit{kernel} é deslocado sobre a imagem, sendo posicionado em regiões sucessivas. Em cada posição, realiza-se a multiplicação elemento a elemento entre os valores do \textit{kernel} e os da região correspondente da imagem, seguida pela soma desses produtos para gerar um único valor. Cada valor obtido compõe um ponto de uma nova matriz chamada mapa de características (\textit{feature map}) \cite{Rosa2025}. Como ilustrado na \autoref{fig:convolucao}.
+
+\begin{figure}[ht]
+	\centering
+	\caption{Exemplo de convolução 2D}\label{fig:convolucao}
+	\includegraphics[width=10cm]{figuras/convolucao.png}
+    \fonte{\cite{Rosa2025}.}
+\end{figure}
+
+\newpage
+
+\subsection{\textit{Pooling} (Subamostragem)}\label{subsec:polling}
+
+Outra camada importante em uma \textit{CNN} é a camada Pooling. Dois tipos comuns de operações de agrupamento (\textit{pooling}) em redes neurais convolucionais são o \textit{Max Pooling} e o \textit{Average} \textit{Pooling} (\autoref{fig:polling}). Ambas as técnicas atuam sobre regiões locais da imagem de entrada, definidas por um \textit{kernel} deslizante.
+
+O \textit{Max Pooling} retorna, para cada região coberta pelo \textit{kernel}, o valor máximo entre os elementos daquela vizinhança. Essa abordagem é a mais frequentemente utilizada, pois preserva os recursos mais significativos detectados durante a convolução. Além disso, contribui para a supressão de ruídos, descartando ativações de baixa intensidade.
+
+Já o \textit{Average Pooling}, por outro lado, calcula a média dos valores contidos na região coberta pelo \textit{kernel}. Embora também reduza a dimensionalidade, tende a suavizar a representação da imagem, o que pode levar à perda de informações mais marcantes.
+
+\begin{figure}[ht]
+	\centering
+	\caption{Exemplo de \textit{pooling}}\label{fig:polling}
+	\includegraphics[width=8cm]{figuras/polling.png}
+    \fonte{\cite{Rosa2025}.}
+\end{figure}
+
+\newpage
+\subsection{Camada Totalmente Conectada}\label{subsec:densa}
+
+Após passarem por diversas camadas de convolução e pooling, os \textit{feature maps} são progressivamente reduzidos até serem transformados em uma representação unidimensional. Esse vetor resultante é então utilizado como entrada para uma camada totalmente conectada, na qual cada neurônio se conecta a todos os neurônios da camada anterior. Essa etapa permite à rede combinar as caracteristicas extraídas e identificar padrões de maior complexidade \cite{Rosa2025}.
+
+\subsection{\textit{Transfer Learning} (Aprendizado por transferência)}
+
+O \textit{Transfer Learning} tem se destacado como uma abordagem eficaz para reduzir o tempo e os recursos computacionais necessários no treinamento de grandes modelos de aprendizado profundo. Essa técnica consiste em reutilizar modelos previamente treinados em grandes bases de dados, para extrair características relevantes mesmo em cenários com poucos dados rotulados \cite{ISIN2017268}.
+
+A transferência de conhecimento aproveita os vetores de características gerados por redes neurais profundas já treinadas, utilizando seus pesos sinápticos configurados para reconhecer e extrair informações de conjuntos de dados anteriores. Esses vetores servem como descritores das imagens do novo conjunto e podem ser usados para treinar um novo classificador ou inseridos diretamente nas camadas totalmente conectadas da arquitetura original, após ajustes finos (\textit{fine-tuning}) nas camadas convolucionais \cite{aguiar2017}. Assim, essa estratégia tem se mostrado especialmente vantajosa em áreas como a Medicina, onde a disponibilidade de grandes volumes de dados rotulados é limitada.
+

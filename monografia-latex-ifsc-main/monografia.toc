@@ -1,0 +1,45 @@
+\changetocdepth {4}
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase []{Introdução}}{9}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Objetivos gerais}{10}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Objetivos específicos}{10}{section.1.2}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase []{Fundamentação teórica}}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Câncer de mama}{11}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Mamografia digital}{11}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Mama}{12}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.3}Limiarização}{14}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Transformada \textit {Wavelet}}{15}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Redes neurais convolucionais}{21}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Neurônios (\textit {Perceptrons})}{22}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Rede Neural}{23}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Convolução}{24}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}\textit {Pooling} (Subamostragem)}{25}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.5}Camada Totalmente Conectada}{26}{subsection.2.5.5}%
+\contentsline {subsection}{\numberline {2.5.6}\textit {Transfer Learning} (Aprendizado por transferência)}{26}{subsection.2.5.6}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase []{Estado da arte}}{27}{chapter.3}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase []{Proposta}}{28}{chapter.4}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase []{Metodologia}}{29}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Coleta de Dados}{29}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Experimento}{31}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Pré-processamento das Imagens}{33}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}\textit {Data Augmentation}}{35}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Procedimentos de Treinamento e Teste}{35}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}Implementação}{37}{section.5.3}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase []{Resultados}}{38}{chapter.6}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase []{Discussões}}{45}{chapter.7}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {8}\MakeTextUppercase []{Conclusão }}{48}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Trabalhos Futuros}{48}{section.8.1}%
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\contentsline {chapter}{Referências}{49}{section*.65}%
