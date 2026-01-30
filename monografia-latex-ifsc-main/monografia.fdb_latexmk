@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber monografia"] 1769787672.09826 "monografia.bcf" "monografia.bbl" "monografia" 1769794204.99097 0
-  "monografia.bcf" 1769794204.7732 118292 7fcf923fc5ad39ec81fbbdf422624b4a "pdflatex"
+["biber monografia"] 1769787672.09826 "monografia.bcf" "monografia.bbl" "monografia" 1769795404.60941 0
+  "monografia.bcf" 1769795404.4007 118292 7fcf923fc5ad39ec81fbbdf422624b4a "pdflatex"
   "referencias.bib" 1751317570.28397 13623 78afe104d5e3cf8cd46bb52afc5c4a24 ""
   (generated)
   "monografia.bbl"
   "monografia.blg"
   (rewritten before read)
-["cusdep acn acr monografia"] 1769787673.40131 "monografia.acn" "monografia.acr" "monografia" 1769794204.99129 0
-  "monografia.acn" 1769794194.00504 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["cusdep acn acr monografia"] 1769787673.40131 "monografia.acn" "monografia.acr" "monografia" 1769795404.60972 0
+  "monografia.acn" 1769795393.9536 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "monografia.acr"
   (rewritten before read)
-["pdflatex"] 1769794192.33274 "/home/jessica/Eng/TCC/tcc/monografia-latex-ifsc-main/monografia.tex" "monografia.pdf" "monografia" 1769794204.99135 0
+["pdflatex"] 1769795392.32964 "/home/jessica/Eng/TCC/tcc/monografia-latex-ifsc-main/monografia.tex" "monografia.pdf" "monografia" 1769795404.60979 0
   "/etc/texmf/web2c/texmf.cnf" 1751041644.54461 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/jessica/Eng/TCC/tcc/monografia-latex-ifsc-main/monografia.tex" 1769792711.32647 3446 044b86f65cc72ab7b06b88420de24202 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -316,7 +316,7 @@
   "anexos-apendices/apendices.tex" 1769792471.67481 3480 924e84c4ca0012d768e1eb05961e8112 ""
   "capitulos/capitulo-01.tex" 1764194460.3786 5602 0f7a287c454d0396f5c762c71e139af4 ""
   "capitulos/capitulo-02.tex" 1769792711.41466 31771 7e0acf09f5ad83f953ddba99857f90f4 ""
-  "capitulos/capitulo-04.tex" 1769794179.08482 35529 6b8dffba05921f0b26284c682859fbc7 ""
+  "capitulos/capitulo-04.tex" 1769795379.6084 35528 da06369ea628ee61748ac60d520a0c79 ""
   "figuras/GERAL_Accuracy.png" 1763746222.80258 467601 18840f31cbea2c58032908424f7dc397 ""
   "figuras/GERAL_F1_Anormal.png" 1763746225.84707 458337 7fd8005bf7bb4d9ead9f64bd795d3748 ""
   "figuras/GERAL_F1_Macro.png" 1763746227.43412 472749 63875a23f9a7e7e100eb74c48f501112 ""
@@ -352,17 +352,17 @@
   "figuras/ramon.png" 1751297155.57989 15272 1cd17f34e98ffe38b3b46082fe33dd74 ""
   "figuras/sinal.png" 1751051168 44129 77fa2a3a02156bfa72ade104929dd976 ""
   "ifscthesis.cls" 1751051166 16077 85c37c88fffe2b126f86a0e61dba8acf ""
-  "monografia.acn" 1769794194.00504 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "monografia.acr" 1769794193.85904 0 d41d8cd98f00b204e9800998ecf8427e "cusdep acn acr monografia"
-  "monografia.aux" 1769794204.7512 39890 4be783f45251f1fb60c8fc0453406e80 "pdflatex"
+  "monografia.acn" 1769795393.9536 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "monografia.acr" 1769795393.8156 0 d41d8cd98f00b204e9800998ecf8427e "cusdep acn acr monografia"
+  "monografia.aux" 1769795404.3807 39890 0d5cd4ede41647eb86689949e62d1bb1 "pdflatex"
   "monografia.bbl" 1769787673.37948 55636 591f501c4d6fd6909dd89a50b0b375cd "biber monografia"
-  "monografia.lof" 1769794204.77582 3802 52b35ac1b90e67a592cf68243c61374f "pdflatex"
-  "monografia.lot" 1769794204.77582 585 4e358f64d3a3358e3a4ce69f55442868 "pdflatex"
-  "monografia.run.xml" 1769794204.77582 2553 48184744a52cacdbdb7ac6bc333519db "pdflatex"
-  "monografia.slo" 1769794194.00604 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "monografia.sls" 1769794194.00304 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "monografia.lof" 1769795404.40263 3802 52b35ac1b90e67a592cf68243c61374f "pdflatex"
+  "monografia.lot" 1769795404.4027 585 4e358f64d3a3358e3a4ce69f55442868 "pdflatex"
+  "monografia.run.xml" 1769795404.40263 2553 48184744a52cacdbdb7ac6bc333519db "pdflatex"
+  "monografia.slo" 1769795393.9536 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "monografia.sls" 1769795393.9506 0 d41d8cd98f00b204e9800998ecf8427e ""
   "monografia.tex" 1769792711.32647 3446 044b86f65cc72ab7b06b88420de24202 ""
-  "monografia.toc" 1769794204.77582 4042 d01146b5fb0b1b5b70d79ead516c8b4b "pdflatex"
+  "monografia.toc" 1769795404.4027 4042 d01146b5fb0b1b5b70d79ead516c8b4b "pdflatex"
   "pretextuais/abreviacoes-siglas.tex" 1751051166 1522 f310fbd547cfa8bd9916582a972bd0ac ""
   "pretextuais/agradecimentos.tex" 1763763072.6389 1467 9ff5f5f48e75afa2434b74c844f39812 ""
   "pretextuais/capa.tex" 1769793270.48879 1283 ab9b1e60da88360b8deaa973179be9db ""
