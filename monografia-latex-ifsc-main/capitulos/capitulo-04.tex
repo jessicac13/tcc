@@ -475,7 +475,7 @@ da arquitetura ao excesso de variabilidade.
 \section*{Modelo ResNet50}
 
 Os resultados obtidos pela ResNet50 sob diferentes configurações são apresentados na \autoref{tab:resnet50}. A arquitetura sem pré-processamento e sem \textit{data augmentation} apresentou acurácia de 0{,}50 e grande desequilíbrio entre as classes. Com \textit{data augmentation} isolada, houve melhoria aparente na acurácia (0{,}58), mas a classe Anormal praticamente colapsou (f1 = 0{,}07). Isso mostra que a \textit{data augmentation} sem pré-processamento intensifica padrões da classe majoritária. O pré-processamento
-Novamente, com a aplicação do pré-processamento \textit{Coiflet}, observou-se a maior evolução: acurácia de 0{,}65, f1 da classe Normal de 0{,}74 e f1 da classe Anormal de 0{,}49 (valores superiores aos obtidos nas configurações anteriores). O pré-procedimento proporcionou estabilidade, redução de ruído e realce das estruturas relevantes, permitindo que a ResNet50 extraísse características de forma mais consistente.
+Novamente, com a aplicação do pré-processamento \textit{Coiflet}, observou-se a maior evolução: acurácia de 0{,}65, f1 da classe Normal de 0{,}74 e f1 da classe Anormal de 0{,}49 (valores superiores aos obtidos nas configurações anteriores). O pré-processamento proporcionou estabilidade, redução de ruído e realce das estruturas relevantes, permitindo que a ResNet50 extraísse características de forma mais consistente.
 
 Com pré-processamento + \textit{data augmentation}, o desempenho manteve-se estável (acurácia de 0{,}65), com leve queda para a classe Anormal, mas sem os colapsos observados em arquiteturas menores. Isso indica que a ResNet50 tolera melhor o aumento de variabilidade quando os dados já chegam limpos e estruturados.
 
