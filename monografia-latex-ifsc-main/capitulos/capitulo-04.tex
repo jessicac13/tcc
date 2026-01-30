@@ -277,139 +277,21 @@ não esteja disponível, a execução ocorre normalmente na CPU.
 
 
 
-\chapter{Resultados}\label{resultados}
+\chapter{Resultados e Discussão}\label{resultados}
 
+Nesta seção, os resultados quantitativos são apresentados prioritariamente por meio de tabelas, permitindo comparação direta entre arquiteturas e configurações experimentais. As figuras globais são mantidas apenas como apoio visual no \autoref{Visualização dos resultados globais}, enquanto a análise principal baseia-se nas métricas reportadas nas tabelas.
 
-Nesta seção são apresentados os resultados quantitativos obtidos para todas as arquiteturas avaliadas: \textit{CNN} Simples, \textit{ResNet18}, \textit{ResNet34} e \textit{ResNet50}. Os valores reportados refletem o desempenho observado durante os experimentos e foram organizados em gráficos comparativos para facilitar a análise entre diferentes configurações e modelos.
+Foram avaliadas quatro arquiteturas: CNN Simples, ResNet18, ResNet34 e ResNet50, em quatro cenários experimentais.
 
-\section*{Visualização dos Resultados}
+Para as comparações entre configurações, adotou-se como referência o pré-proces- \newline samento baseado na família \textit{Wavelet Coiflet}, uma vez que essa família apresentou o melhor equilíbrio entre as classes ao longo dos experimentos, proporcionando redução de ruído e realce adequado das estruturas relevantes.
 
-A Figura~\ref{fig:acc} apresenta a acurácia das arquiteturas avaliadas.  
-As Figuras~\ref{fig:f1-normal} e \ref{fig:f1-anormal} exibem, respectivamente, os valores de \textit{F1-score} para as classes Normal e Anormal.
+Com isso, as análises que seguem são organizadas considerando quatro cenários para cada arquitetura: (i) sem pré-processamento e sem data augmentation (\textit{baseline}); (ii) apenas com \textit{data augmentation}; (iii) apenas com pré-processamento \textit{Coiflet}; e (iv) com a combinação de Coiflet e data augmentation.
 
-As Figuras~\ref{fig:prec-normal} e \ref{fig:prec-anormal} mostram a precisão das duas classes, enquanto as Figuras~\ref{fig:rec-normal} e \ref{fig:rec-anormal} apresentam os respectivos valores de \textit{recall}.
-
-Por fim, as Figuras~\ref{fig:f1_macro} a \ref{fig:prec_ponderado} reúnem as métricas macro e ponderadas, permitindo uma visão consolidada do desempenho global.
-
-% ---------------- FIGURAS ----------------
-
-\begin{figure}[!h]
-    \caption{Acurácia para todas as arquiteturas}
-    \centering
-    \includegraphics[width=\textwidth]{figuras/GERAL_Accuracy.png}
-    \label{fig:acc}
-    \fonteproprioautor
-\end{figure}
-
-\begin{figure}[!h]
-    \caption{F1-score - Classe Normal}
-    \centering
-    \includegraphics[width=\textwidth]{figuras/GERAL_F1_Normal.png}
-    \label{fig:f1-normal}
-    \fonteproprioautor
-\end{figure}
-
-\begin{figure}[!h]
-    \caption{F1-score - Classe Anormal}
-    \centering
-    \includegraphics[width=\textwidth]{figuras/GERAL_F1_Anormal.png}
-    \label{fig:f1-anormal}
-    \fonteproprioautor
-\end{figure}
-
-\begin{figure}[!h]
-    \caption{Precisão - Classe Normal}
-    \centering
-    \includegraphics[width=\textwidth]{figuras/GERAL_Prec_Normal.png}
-    \label{fig:prec-normal}
-    \fonteproprioautor
-\end{figure}
-
-\begin{figure}[!h]
-    \caption{Precisão - Classe Anormal}
-    \centering
-    \includegraphics[width=\textwidth]{figuras/GERAL_Prec_Anormal.png}
-    \label{fig:prec-anormal}
-    \fonteproprioautor
-\end{figure}
-
-\begin{figure}[!h]
-    \caption{Recall - Classe Normal}
-    \centering
-    \includegraphics[width=\textwidth]{figuras/GERAL_Rec_Normal.png}
-    \label{fig:rec-normal}
-    \fonteproprioautor
-\end{figure}
-
-\begin{figure}[!h]
-    \caption{Recall - Classe Anormal}
-    \centering
-    \includegraphics[width=\textwidth]{figuras/GERAL_Rec_Anormal.png}
-    \label{fig:rec-anormal}
-    \fonteproprioautor
-\end{figure}
-
-% Figuras macro e ponderadas 
-
-\begin{figure}[!h]
-    \caption{F1-score - Macro}
-    \centering
-    \includegraphics[width=\textwidth]{figuras/GERAL_F1_Macro.png}
-    \label{fig:f1_macro}
-    \fonteproprioautor
-\end{figure}
-
-\begin{figure}[!h]
-    \caption{F1-score - Ponderado}
-    \centering
-    \includegraphics[width=\textwidth]{figuras/GERAL_F1_Weighted.png}
-    \label{fig:f1_ponderado}
-    \fonteproprioautor
-\end{figure}
-
-\begin{figure}[!h]
-    \caption{Recall - Macro}
-    \centering
-    \includegraphics[width=\textwidth]{figuras/GERAL_Rec_Macro.png}
-    \label{fig:recall_macro}
-    \fonteproprioautor
-\end{figure}
-
-\begin{figure}[!h]
-    \caption{Recall - Ponderado}
-    \centering
-    \includegraphics[width=\textwidth]{figuras/GERAL_Rec_Weighted.png}
-    \label{fig:recall_ponderado}
-    \fonteproprioautor
-\end{figure}
-
-\begin{figure}[!h]
-    \caption{Precisão - Macro.}
-    \centering
-    \includegraphics[width=\textwidth]{figuras/GERAL_Prec_Macro.png}
-    \label{fig:prec_macro}
-    \fonteproprioautor
-\end{figure}
-
-\begin{figure}[!h]
-    \caption{Precisão - Ponderado}
-    \centering
-    \includegraphics[width=\textwidth]{figuras/GERAL_Prec_Weighted.png}
-    \label{fig:prec_ponderado}
-    \fonteproprioautor
-\end{figure}
-
-
-
-\chapter{Discussões}\label{Discussão}
-
-Antes de apresentar a análise individual de cada arquitetura, é importante contextualizar as condições sob as quais os modelos foram avaliados. O conjunto de teste contém 42 imagens da classe Normal e 24 da classe Anormal, o que, embora represente um desbalanceamento moderado, é suficiente para influenciar as métricas da classe minoritária. Conforme descrito na metodologia, técnicas de amostragem ponderada foram empregadas para mitigar esse problema durante o treinamento. No entanto, mesmo com esse balanceamento, observou-se que vários modelos ainda apresentaram tendência a favorecer a classe Normal.
-
-Para as comparações entre configurações, adotou-se como referência o pré-processamento baseado na família \textit{Wavelet Coiflet}, já que essa família apresentou o melhor equilíbrio entre as classes, proporcionando redução de ruído e realce adequado das estruturas relevantes. Com isso, as análises que seguem são organizadas considerando quatro cenários para cada arquitetura: sem pré-processamento e sem \textit{data augmentation}, apenas com \textit{data augmentation}, apenas com pré-processamento \textit{Coiflet} e com a combinação de ambos.
+O conjunto de teste contém 42 imagens da classe Normal e 24 da classe Anormal, caracterizando um desbalanceamento moderado. Embora tenham sido utilizados pesos de classe durante o treinamento, observou-se que a classe Normal ainda tende a dominar o aprendizado em diversas configurações, tornando essencial a análise individual das métricas por classe.
 
 \section*{Modelo \textit{CNN} simples}
 
-O primeiro modelo avaliado foi uma \textit{CNN} simples, que obteve acurácia de aproximadamente 52\%. Embora a classe Normal apresente precisão de 61\% e recall de 67\%, esses valores não representam um desempenho satisfatório, pois em uma tarefa binária resultados próximos de 60\% ficam perigosamente próximos do comportamento aleatório. Já a classe Anormal apresentou desempenho ainda mais limitado (\textit{precision} de 30\% e \textit{recall} de 25\%), evidenciando forte incapacidade de identificar corretamente os casos minoritários. Esse desequilíbrio se reflete nos f1-scores (0{,}64 para Normal e 0{,}27 para Anormal), indicando que, apesar de reconhecer alguns padrões básicos, o modelo falha em alcançar um nível de confiabilidade mínimo para aplicações clínicas.
+O primeiro modelo avaliado foi uma CNN simples, cujos resultados estão apresentados na Tabela~\ref{tab:cnn_simples}. O modelo obteve acurácia de aproximadamente 52\%. Embora a classe Normal apresente precisão de 61\% e recall de 67\%, esses valores não representam um desempenho satisfatório, pois em uma tarefa binária resultados próximos de 60\% ficam perigosamente próximos do comportamento aleatório. Já a classe Anormal apresentou desempenho ainda mais limitado (\textit{precision} de 30\% e \textit{recall} de 25\%), evidenciando forte incapacidade de identificar corretamente os casos minoritários. Esse desequilíbrio se reflete nos f1-scores (0{,}64 para Normal e 0{,}27 para Anormal), indicando que, apesar de reconhecer alguns padrões básicos, o modelo falha em alcançar um nível de confiabilidade mínimo para aplicações clínicas.
 
 Ao aplicar \textit{data augmentation}, observou-se uma melhora significativa na classe Anormal em termos de f1-score, embora acompanhada de queda na acurácia global. Isso indica que o aumento de variabilidade beneficia a generalização da classe minoritária ao reduzir o viés em direção à classe Normal. Ainda assim, o modelo não conseguiu atingir um equilíbrio satisfatório, reforçando a ideia de que a \textit{CNN} simples não é suficientemente expressiva para capturar adequadamente as nuances do problema.
 
@@ -417,9 +299,62 @@ A introdução do pré-processamento baseado na \textit{wavelet Coiflet}, mesmo 
 
 Combinando pré-processamento e \textit{data augmentation}, o modelo atingiu maior equilíbrio entre as classes, embora com acurácia moderada de 0{,}55. Houve perda de sensibilidade na classe Normal (recall de 0{,}38), mas um aumento expressivo na classe Anormal (recall de 0{,}83 e f1-score de 0{,}57, seu melhor até então). Isso demonstra que, após a limpeza e estruturação dos dados proporcionadas pela \textit{Coiflet}, a \textit{data augmentation} passou a atuar de forma mais eficaz, reforçando a capacidade de identificação da classe minoritária.
 
+\begin{table}[!h]
+\centering
+\caption{Resultados da CNN Simples sob diferentes configurações}
+\label{tab:cnn_simples}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llccccccc}
+\hline
+\textbf{Arq.} & \textbf{Config.} & \textbf{Acc} &
+\textbf{P(N)} & \textbf{R(N)} & \textbf{F1(N)} &
+\textbf{P(A)} & \textbf{R(A)} & \textbf{F1(A)} \\
+\hline
+
+CNN Simples & Baseline & 
+\textcolor{orange}{\textbf{0,5152}} &
+0,61 & 0,67 & 0,64 &
+\textcolor{orange}{\textbf{0,30}} & 
+\textcolor{orange}{\textbf{0,25}} & 
+\textcolor{orange}{\textbf{0,27}} \\
+
+CNN Simples & + Augmentation & 
+\textcolor{blue}{\textbf{0,5000}} &
+0,65 & 0,48 & 0,55 &
+0,37 & 0,54 & \textcolor{blue}{\textbf{0,44}} \\
+
+CNN Simples & + Preproc coif4 & 
+\textcolor{green!60!black}{\textbf{0,6515}} &
+0,72 & 0,74 & 0,73 &
+\textcolor{green!60!black}{\textbf{0,52}} & 
+\textcolor{green!60!black}{\textbf{0,50}} & 
+\textcolor{green!60!black}{\textbf{0,51}} \\
+
+CNN Simples & + Preproc coif4 + Aug & 
+0,5455 &
+0,80 & 0,38 & 0,52 &
+0,43 & \textcolor{purple}{\textbf{0,83}} & 
+\textcolor{purple}{\textbf{0,57}} \\
+\hline
+\end{tabular}
+}
+\fonteproprioautor
+\end{table}
+
+
+\noindent \textbf{Destaques:} Os valores em \textbf{laranja} indicam o desempenho \textit{baseline},
+caracterizado por limitação na identificação da classe Anormal.
+Em \textbf{azul}, a \textit{data augmentation} melhora a representação da classe Anormal,
+porém com impacto negativo na acurácia global.
+Os valores em \textbf{verde} indicam ganho consistente com o pré-processamento
+\textit{Coiflet}, enquanto em \textbf{roxo} destaca-se a combinação \textit{Coiflet + augmentation},
+que favorece a sensibilidade à classe Anormal, à custa de queda no desempenho da
+classe Normal.
+
+
 \section*{Modelo ResNet18}
 
-O uso de arquiteturas mais profundas também trouxe ganhos importantes. A ResNet18 sem pré-processamento superou a \textit{CNN} simples, alcançando acurácia de 0{,}5606 e melhorias em todas as métricas. A classe Normal apresentou f1-score de 0{,}67 e a Anormal de 0{,}33, indicando avanço na extração de características mesmo sem qualquer tratamento adicional.
+O uso de arquiteturas mais profundas também trouxe ganhos importantes. A ResNet18 sem pré-processamento superou a \textit{CNN} simples, alcançando acurácia de 0{,}5606 e melhorias em todas as métricas (conforme apresentado na Tabela~\ref{tab:resnet18}). A classe Normal apresentou f1-score de 0{,}67 e a Anormal de 0{,}33, indicando avanço na extração de características mesmo sem qualquer tratamento adicional.
 
 Com \textit{data augmentation}, a ResNet18 atingiu acurácia de 51{,}5\%, e ainda apresentou desempenho muito distinto entre as classes: f1-score de 0{,}64 para Normal e apenas 0{,}27 para Anormal. Apesar do balanceamento por pesos, o modelo continuou tendo dificuldade para aprender padrões representativos da classe Anormal quando os dados são utilizados sem pré-processamento. Isso sugere que a variabilidade introduzida pela \textit{data augmentation}, aplicada sobre imagens brutas, não foi suficiente para melhorar a capacidade do modelo de distinguir características relevantes da classe minoritária.
 
@@ -427,21 +362,171 @@ A inserção do pré-processamento \textit{Coiflet}, sem \textit{data augmentati
 
 Com a combinação de pré-processamento e \textit{data augmentation}, a ResNet18 alcançou um de seus resultados mais equilibrados: acurácia de 0{,}64, com f1-scores de 0{,}71 para Normal e 0{,}52 para Anormal. Nessa configuração, a \textit{data augmentation} passou a atuar de forma benéfica, pois a entrada já havia sido estabilizada pelo pré-processamento. Assim, a variabilidade adicional não gerou inconsistências, mas contribuiu para melhorar a representação da classe Anormal sem comprometer significativamente o desempenho na classe Normal.
 
+\begin{table}[!h]
+\centering
+\caption{Resultados da ResNet18 sob diferentes configurações}
+\label{tab:resnet18}
+\renewcommand{\arraystretch}{1.2}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llccccccc}
+\hline
+\textbf{Arq.} & \textbf{Config.} & \textbf{Acc} &
+\textbf{P(N)} & \textbf{R(N)} & \textbf{F1(N)} &
+\textbf{P(A)} & \textbf{R(A)} & \textbf{F1(A)} \\
+\hline
+
+ResNet18 & Baseline &
+\textcolor{orange}{\textbf{0,5606}} &
+0,64 & 0,71 & \textcolor{orange}{\textbf{0,67}} &
+0,37 & 0,29 & \textcolor{orange}{\textbf{0,33}} \\
+
+ResNet18 & + Augmentation &
+\textcolor{blue}{\textbf{0,5152}} &
+0,61 & 0,67 & \textcolor{blue}{\textbf{0,64}} &
+0,30 & 0,25 & \textcolor{blue}{\textbf{0,27}} \\
+
+ResNet18 & + Preproc coif4 &
+\textcolor{green!60!black}{\textbf{0,6212}} &
+0,67 & 0,81 & 0,73 &
+0,47 & 0,29 & \textcolor{green!60!black}{\textbf{0,36}} \\
+
+ResNet18 & + Preproc coif4 + Aug &
+\textcolor{purple}{\textbf{0,6364}} &
+0,72 & 0,69 & \textcolor{purple}{\textbf{0,71}} &
+0,50 & 0,54 & \textcolor{purple}{\textbf{0,52}} \\
+\hline
+\end{tabular}
+}
+\fonteproprioautor
+\end{table}
+
+
+\noindent \textbf{Destaques:} Os valores em \textbf{laranja} indicam o desempenho da ResNet18
+sem pré-proces- \newline samento, com limitação na identificação da classe Anormal.
+Em \textbf{azul}, a \textit{data augmentation} isolada não trouxe ganhos relevantes,
+evidenciando que a variabilidade não é eficaz sem tratamento prévio dos dados.
+Os valores em \textbf{verde} indicam melhora consistente com o uso do
+pré-processamento \textit{Coiflet}, especialmente para a classe Anormal.
+Por fim, os valores em \textbf{roxo} destacam a combinação \textit{Coiflet + augmentation},
+que resulta em um dos cenários mais equilibrados entre as classes.
+
+
 \section*{Modelo ResNet34}
 
-A ResNet34 sem pré-processamento e sem \textit{data augmentation} apresentou acurácia de 0{,}61 com forte tendência à classe Normal (f1 = 0{,}72) e baixo desempenho para Anormal (f1 = 0{,}32). Ao aplicar apenas \textit{data augmentation}, o desempenho caiu severamente (acurácia 0{,}50), mostrando que dados não tratados tornam a \textit{data augmentation} prejudicial, introduzindo ruído e instabilidade.
+A Tabela~\ref{tab:resnet34} resume os resultados obtidos com a ResNet34. O modelo sem pré-processamento e sem \textit{data augmentation} apresentou acurácia de 0{,}61 com forte tendência à classe Normal (f1 = 0{,}72) e baixo desempenho para Anormal (f1 = 0{,}32). Ao aplicar apenas \textit{data augmentation}, o desempenho caiu severamente (acurácia 0{,}50), mostrando que dados não tratados tornam a \textit{data augmentation} prejudicial, introduzindo ruído e instabilidade.
 
 Quando aplicado o pré-processamento \textit{Coiflet}, o modelo atingiu seus melhores resultados: acurácia de 0{,}68 e equilíbrio muito superior (f1 = 0{,}75 para Normal e 0{,}57 para Anormal). Assim como nos modelos anteriores, o pré-processamento mostrou ser essencial para extrair padrões relevantes.
 
 Já a combinação pré-processamento + \textit{data augmentation} levou a uma queda acentuada no desempenho, com colapso total da classe Anormal (f1 = 0). A variabilidade artificial superou a capacidade da rede de manter separação entre as classes, evidenciando que a ResNet34 é mais sensível à \textit{data augmentation} e depende fortemente da limpeza fornecida pela \textit{Coiflet}.
 
+\begin{table}[!h]
+\centering
+\caption{Resultados da ResNet34 sob diferentes configurações}
+\label{tab:resnet34}
+\renewcommand{\arraystretch}{1.2}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llccccccc}
+\hline
+\textbf{Arq.} & \textbf{Config.} & \textbf{Acc} &
+\textbf{P(N)} & \textbf{R(N)} & \textbf{F1(N)} &
+\textbf{P(A)} & \textbf{R(A)} & \textbf{F1(A)} \\
+\hline
+
+ResNet34 & Baseline &
+\textcolor{orange}{\textbf{0,6061}} &
+0,65 & 0,81 & \textcolor{orange}{\textbf{0,72}} &
+0,43 & 0,25 & \textcolor{orange}{\textbf{0,32}} \\
+
+ResNet34 & + Augmentation &
+\textcolor{blue}{\textbf{0,5000}} &
+0,60 & 0,64 & 0,62 &
+0,29 & 0,25 & 0,27 \\
+
+ResNet34 & + Preproc coif4 &
+\textcolor{green!60!black}{\textbf{0,6818}} &
+0,76 & 0,74 & \textcolor{green!60!black}{\textbf{0,75}} &
+0,56 & 0,58 & \textcolor{green!60!black}{\textbf{0,57}} \\
+
+ResNet34 & + Preproc coif4 + Aug &
+\textcolor{purple}{\textbf{0,5455}} &
+0,60 & 0,86 & 0,71 &
+0,00 & 0,00 & \textcolor{purple}{\textbf{0,00}} \\
+\hline
+\end{tabular}
+}
+\fonteproprioautor
+\end{table}
+
+
+\noindent \textbf{Destaques:} Os valores em \textbf{laranja} indicam o desempenho da ResNet34
+sem pré-proces-
+\newline samento, caracterizado por forte viés em favor da classe Normal e
+limitação na identificação da classe Anormal.
+Em \textbf{azul}, a aplicação isolada de \textit{data augmentation} resulta em queda acentuada
+de desempenho, sugerindo aumento de ruído e instabilidade no aprendizado.
+Os valores em \textbf{verde} destacam o melhor cenário, no qual o pré-processamento
+\textit{Coiflet} promove melhora consistente e equilibrada entre as classes.
+Por fim, os valores em \textbf{roxo} evidenciam o colapso da classe Anormal quando
+pré-processamento e \textit{data augmentation} são combinados, indicando elevada sensibilidade
+da arquitetura ao excesso de variabilidade.
+
+
+
 \section*{Modelo ResNet50}
 
-A ResNet50 sem pré-processamento e sem \textit{data augmentation} apresentou acurácia de 0{,}50 e grande desequilíbrio entre as classes. Com \textit{data augmentation} isolada, houve melhoria aparente na acurácia (0{,}58), mas a classe Anormal praticamente colapsou (f1 = 0{,}07). Isso mostra que a \textit{data augmentation} sem pré-processamento intensifica padrões da classe majoritária. O pré-processamento
+Os resultados obtidos pela ResNet50 sob diferentes configurações são apresentados na \autoref{tab:resnet50}. A arquitetura sem pré-processamento e sem \textit{data augmentation} apresentou acurácia de 0{,}50 e grande desequilíbrio entre as classes. Com \textit{data augmentation} isolada, houve melhoria aparente na acurácia (0{,}58), mas a classe Anormal praticamente colapsou (f1 = 0{,}07). Isso mostra que a \textit{data augmentation} sem pré-processamento intensifica padrões da classe majoritária. O pré-processamento
 Novamente, com a aplicação do pré-processamento \textit{Coiflet}, observou-se a maior evolução: acurácia de 0{,}65, f1 da classe Normal de 0{,}74 e f1 da classe Anormal de 0{,}49 (valores superiores aos obtidos nas configurações anteriores). O pré-procedimento proporcionou estabilidade, redução de ruído e realce das estruturas relevantes, permitindo que a ResNet50 extraísse características de forma mais consistente.
 
 Com pré-processamento + \textit{data augmentation}, o desempenho manteve-se estável (acurácia de 0{,}65), com leve queda para a classe Anormal, mas sem os colapsos observados em arquiteturas menores. Isso indica que a ResNet50 tolera melhor o aumento de variabilidade quando os dados já chegam limpos e estruturados.
 
+\begin{table}[!h]
+\centering
+\caption{Resultados da ResNet50 sob diferentes configurações}
+\label{tab:resnet50}
+\renewcommand{\arraystretch}{1.2}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llccccccc}
+\hline
+\textbf{Arq.} & \textbf{Config.} & \textbf{Acc} &
+\textbf{P(N)} & \textbf{R(N)} & \textbf{F1(N)} &
+\textbf{P(A)} & \textbf{R(A)} & \textbf{F1(A)} \\
+\hline
+
+ResNet50 & Baseline &
+\textcolor{orange}{\textbf{0,5000}} &
+0,59 & 0,69 & \textcolor{orange}{\textbf{0,64}} &
+0,24 & 0,17 & \textcolor{orange}{\textbf{0,20}} \\
+
+ResNet50 & + Augmentation &
+\textcolor{blue}{\textbf{0,5758}} &
+0,62 & 0,88 & \textcolor{blue}{\textbf{0,73}} &
+0,17 & 0,04 & \textcolor{blue}{\textbf{0,07}} \\
+
+ResNet50 & + Preproc coif4 &
+\textcolor{green!60!black}{\textbf{0,6515}} &
+0,71 & 0,76 & \textcolor{green!60!black}{\textbf{0,74}} &
+0,52 & 0,46 & \textcolor{green!60!black}{\textbf{0,49}} \\
+
+ResNet50 & + Preproc coif4 + Aug &
+\textcolor{purple}{\textbf{0,6515}} &
+0,70 & 0,79 & \textcolor{purple}{\textbf{0,74}} &
+0,53 & 0,42 & \textcolor{purple}{\textbf{0,47}} \\
+\hline
+\end{tabular}
+}
+\fonteproprioautor
+\end{table}
+
+
+\noindent \textbf{Destaques:} Os valores em \textbf{laranja} indicam que, sem pré-processamento,
+a ResNet50 apresenta desempenho próximo ao aleatório e forte desequilíbrio entre as
+classes. Em \textbf{azul}, a \textit{data augmentation} isolada não beneficia a classe Anormal,
+acentuando o desbalanceamento e comprometendo a generalização.
+Os valores em \textbf{verde} evidenciam ganho expressivo com o pré-processamento
+\textit{Coiflet}, permitindo melhor aproveitamento da profundidade da arquitetura.
+Por fim, os valores em \textbf{roxo} mostram que a combinação \textit{Coiflet + augmentation}
+mantém desempenho estável, indicando maior tolerância da ResNet50 à variabilidade
+quando os dados já estão previamente estruturados.
 
 \chapter{Conclusão }\label{Conclusão}
 
