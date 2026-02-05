@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.6.27)  30 JAN 2026 14:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.6.27)  5 FEB 2026 20:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1686,10 +1686,12 @@ File: figuras/polling.png Graphic file (type png)
 <use figuras/polling.png>
 Package pdftex.def Info: figuras/polling.png  used on input line 376.
 (pdftex.def)             Requested size: 227.62204pt x 223.1799pt.
- [26 <./figuras/convolucao.png> <./figuras/polling.png>] [27]) (./capitulos/capitulo-04.tex [28] [29
+ [26 <./figuras/convolucao.png> <./figuras/polling.png>] [27] [28
+
+]) (./capitulos/capitulo-04.tex [29] [30
 
 ]
-<figuras/ramon.png, id=551, 513.92pt x 79.29625pt>
+<figuras/ramon.png, id=556, 513.92pt x 79.29625pt>
 File: figuras/ramon.png Graphic file (type png)
 <use figuras/ramon.png>
 Package pdftex.def Info: figuras/ramon.png  used on input line 13.
@@ -1702,37 +1704,37 @@ Overfull \hbox (5.86612pt too wide) in paragraph at lines 17--18
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 23.
 
-LaTeX Warning: Citation 'https://www.kaggle.com/datasets/kmader/mias-mammography' on page 30 undefined on input line 23.
+LaTeX Warning: Citation 'https://www.kaggle.com/datasets/kmader/mias-mammography' on page 31 undefined on input line 23.
 
-[30
+[31
 
  <./figuras/ramon.png>]
-<figuras/minimias.png, id=576, 738.5994pt x 426.393pt>
+<figuras/minimias.png, id=580, 738.5994pt x 426.393pt>
 File: figuras/minimias.png Graphic file (type png)
 <use figuras/minimias.png>
 Package pdftex.def Info: figuras/minimias.png  used on input line 37.
 (pdftex.def)             Requested size: 455.0pt x 262.6693pt.
- [31 <./figuras/minimias.png>] [32] [33]
-<figuras/mdb005original.png, id=601, 1027.84pt x 1027.84pt>
+ [32 <./figuras/minimias.png>] [33] [34]
+<figuras/mdb005original.png, id=605, 1027.84pt x 1027.84pt>
 File: figuras/mdb005original.png Graphic file (type png)
 <use figuras/mdb005original.png>
 Package pdftex.def Info: figuras/mdb005original.png  used on input line 165.
 (pdftex.def)             Requested size: 218.39806pt x 218.39351pt.
-<figuras/mdb005preproc.png, id=602, 1027.84pt x 1027.84pt>
+<figuras/mdb005preproc.png, id=606, 1027.84pt x 1027.84pt>
 File: figuras/mdb005preproc.png Graphic file (type png)
 <use figuras/mdb005preproc.png>
 Package pdftex.def Info: figuras/mdb005preproc.png  used on input line 171.
 (pdftex.def)             Requested size: 218.39806pt x 218.39351pt.
- [34 <./figuras/mdb005original.png> <./figuras/mdb005preproc.png>] [35] [36] [37] [38] [39
+ [35 <./figuras/mdb005original.png> <./figuras/mdb005preproc.png>] [36] [37] [38] [39] [40
 
-] [40] [41] [42] [43]) [44
+] [41] [42] [43] [44]) [45
 
 ]
 
 Package biblatex Warning: No driver for 'bachelorsthesis'.
 (biblatex)                Using fallback driver on input line 118.
 
-[45
+[46
 
 ]
 Overfull \hbox (16.91626pt too wide) in paragraph at lines 118--118
@@ -1743,7 +1745,7 @@ Overfull \hbox (16.91626pt too wide) in paragraph at lines 118--118
 Package biblatex Warning: No driver for 'bachelorsthesis'.
 (biblatex)                Using fallback driver on input line 118.
 
-[46]
+[47]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 118.
  (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1757,13 +1759,13 @@ Overfull \hbox (11.207pt too wide) in paragraph at lines 118--118
 [][]\T1/lmr/m/n/12 VERY TE-CH-NO-LOGY. \T1/lmr/bx/n/12 Ma-chine Le-ar-ning Al-go-rithms: What is a Neu-ral Network?
  []
 
-[47] (./anexos-apendices/apendices.tex [48]
-<figuras/GERAL_Accuracy.png, id=767, 867.24pt x 433.62pt>
+[48] (./anexos-apendices/apendices.tex [49]
+<figuras/GERAL_Accuracy.png, id=772, 867.24pt x 433.62pt>
 File: figuras/GERAL_Accuracy.png Graphic file (type png)
 <use figuras/GERAL_Accuracy.png>
 Package pdftex.def Info: figuras/GERAL_Accuracy.png  used on input line 18.
 (pdftex.def)             Requested size: 455.0pt x 227.50172pt.
-<figuras/GERAL_F1_Normal.png, id=768, 867.24pt x 433.62pt>
+<figuras/GERAL_F1_Normal.png, id=773, 867.24pt x 433.62pt>
 File: figuras/GERAL_F1_Normal.png Graphic file (type png)
 <use figuras/GERAL_F1_Normal.png>
 Package pdftex.def Info: figuras/GERAL_F1_Normal.png  used on input line 26.
@@ -1772,7 +1774,7 @@ Package pdftex.def Info: figuras/GERAL_F1_Normal.png  used on input line 26.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figuras/GERAL_F1_Anormal.png, id=769, 867.24pt x 433.62pt>
+<figuras/GERAL_F1_Anormal.png, id=774, 867.24pt x 433.62pt>
 File: figuras/GERAL_F1_Anormal.png Graphic file (type png)
 <use figuras/GERAL_F1_Anormal.png>
 Package pdftex.def Info: figuras/GERAL_F1_Anormal.png  used on input line 34.
@@ -1780,7 +1782,7 @@ Package pdftex.def Info: figuras/GERAL_F1_Anormal.png  used on input line 34.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figuras/GERAL_Prec_Normal.png, id=770, 867.24pt x 433.62pt>
+<figuras/GERAL_Prec_Normal.png, id=775, 867.24pt x 433.62pt>
 File: figuras/GERAL_Prec_Normal.png Graphic file (type png)
 <use figuras/GERAL_Prec_Normal.png>
 Package pdftex.def Info: figuras/GERAL_Prec_Normal.png  used on input line 42.
@@ -1788,7 +1790,7 @@ Package pdftex.def Info: figuras/GERAL_Prec_Normal.png  used on input line 42.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figuras/GERAL_Prec_Anormal.png, id=771, 867.24pt x 433.62pt>
+<figuras/GERAL_Prec_Anormal.png, id=776, 867.24pt x 433.62pt>
 File: figuras/GERAL_Prec_Anormal.png Graphic file (type png)
 <use figuras/GERAL_Prec_Anormal.png>
 Package pdftex.def Info: figuras/GERAL_Prec_Anormal.png  used on input line 50.
@@ -1796,7 +1798,7 @@ Package pdftex.def Info: figuras/GERAL_Prec_Anormal.png  used on input line 50.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figuras/GERAL_Rec_Normal.png, id=772, 867.24pt x 433.62pt>
+<figuras/GERAL_Rec_Normal.png, id=777, 867.24pt x 433.62pt>
 File: figuras/GERAL_Rec_Normal.png Graphic file (type png)
 <use figuras/GERAL_Rec_Normal.png>
 Package pdftex.def Info: figuras/GERAL_Rec_Normal.png  used on input line 58.
@@ -1804,7 +1806,7 @@ Package pdftex.def Info: figuras/GERAL_Rec_Normal.png  used on input line 58.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figuras/GERAL_Rec_Anormal.png, id=773, 867.24pt x 433.62pt>
+<figuras/GERAL_Rec_Anormal.png, id=778, 867.24pt x 433.62pt>
 File: figuras/GERAL_Rec_Anormal.png Graphic file (type png)
 <use figuras/GERAL_Rec_Anormal.png>
 Package pdftex.def Info: figuras/GERAL_Rec_Anormal.png  used on input line 66.
@@ -1812,7 +1814,7 @@ Package pdftex.def Info: figuras/GERAL_Rec_Anormal.png  used on input line 66.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figuras/GERAL_F1_Macro.png, id=774, 867.24pt x 433.62pt>
+<figuras/GERAL_F1_Macro.png, id=779, 867.24pt x 433.62pt>
 File: figuras/GERAL_F1_Macro.png Graphic file (type png)
 <use figuras/GERAL_F1_Macro.png>
 Package pdftex.def Info: figuras/GERAL_F1_Macro.png  used on input line 76.
@@ -1820,7 +1822,7 @@ Package pdftex.def Info: figuras/GERAL_F1_Macro.png  used on input line 76.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figuras/GERAL_F1_Weighted.png, id=775, 867.24pt x 433.62pt>
+<figuras/GERAL_F1_Weighted.png, id=780, 867.24pt x 433.62pt>
 File: figuras/GERAL_F1_Weighted.png Graphic file (type png)
 <use figuras/GERAL_F1_Weighted.png>
 Package pdftex.def Info: figuras/GERAL_F1_Weighted.png  used on input line 84.
@@ -1828,7 +1830,7 @@ Package pdftex.def Info: figuras/GERAL_F1_Weighted.png  used on input line 84.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figuras/GERAL_Rec_Macro.png, id=776, 867.24pt x 433.62pt>
+<figuras/GERAL_Rec_Macro.png, id=781, 867.24pt x 433.62pt>
 File: figuras/GERAL_Rec_Macro.png Graphic file (type png)
 <use figuras/GERAL_Rec_Macro.png>
 Package pdftex.def Info: figuras/GERAL_Rec_Macro.png  used on input line 92.
@@ -1836,7 +1838,7 @@ Package pdftex.def Info: figuras/GERAL_Rec_Macro.png  used on input line 92.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figuras/GERAL_Rec_Weighted.png, id=777, 867.24pt x 433.62pt>
+<figuras/GERAL_Rec_Weighted.png, id=782, 867.24pt x 433.62pt>
 File: figuras/GERAL_Rec_Weighted.png Graphic file (type png)
 <use figuras/GERAL_Rec_Weighted.png>
 Package pdftex.def Info: figuras/GERAL_Rec_Weighted.png  used on input line 100.
@@ -1844,7 +1846,7 @@ Package pdftex.def Info: figuras/GERAL_Rec_Weighted.png  used on input line 100.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figuras/GERAL_Prec_Macro.png, id=778, 867.24pt x 433.62pt>
+<figuras/GERAL_Prec_Macro.png, id=783, 867.24pt x 433.62pt>
 File: figuras/GERAL_Prec_Macro.png Graphic file (type png)
 <use figuras/GERAL_Prec_Macro.png>
 Package pdftex.def Info: figuras/GERAL_Prec_Macro.png  used on input line 108.
@@ -1852,7 +1854,7 @@ Package pdftex.def Info: figuras/GERAL_Prec_Macro.png  used on input line 108.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figuras/GERAL_Prec_Weighted.png, id=779, 867.24pt x 433.62pt>
+<figuras/GERAL_Prec_Weighted.png, id=784, 867.24pt x 433.62pt>
 File: figuras/GERAL_Prec_Weighted.png Graphic file (type png)
 <use figuras/GERAL_Prec_Weighted.png>
 Package pdftex.def Info: figuras/GERAL_Prec_Weighted.png  used on input line 116.
@@ -1860,9 +1862,9 @@ Package pdftex.def Info: figuras/GERAL_Prec_Weighted.png  used on input line 116
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [49
+) [50
 
- <./figuras/GERAL_Accuracy.png>] [50 <./figuras/GERAL_F1_Normal.png> <./figuras/GERAL_F1_Anormal.png>] [51 <./figuras/GERAL_Prec_Normal.png> <./figuras/GERAL_Prec_Anormal.png>] [52 <./figuras/GERAL_Rec_Normal.png> <./figuras/GERAL_Rec_Anormal.png>] [53 <./figuras/GERAL_F1_Macro.png> <./figuras/GERAL_F1_Weighted.png>] [54 <./figuras/GERAL_Rec_Macro.png> <./figuras/GERAL_Rec_Weighted.png>] [55 <./figuras/GERAL_Prec_Macro.png> <./figuras/GERAL_Prec_Weighted.png>]
+ <./figuras/GERAL_Accuracy.png>] [51 <./figuras/GERAL_F1_Normal.png> <./figuras/GERAL_F1_Anormal.png>] [52 <./figuras/GERAL_Prec_Normal.png> <./figuras/GERAL_Prec_Anormal.png>] [53 <./figuras/GERAL_Rec_Normal.png> <./figuras/GERAL_Rec_Anormal.png>] [54 <./figuras/GERAL_F1_Macro.png> <./figuras/GERAL_F1_Weighted.png>] [55 <./figuras/GERAL_Rec_Macro.png> <./figuras/GERAL_Rec_Weighted.png>] [56 <./figuras/GERAL_Prec_Macro.png> <./figuras/GERAL_Prec_Weighted.png>]
 \tf@lof=\write9
 \openout9 = `monografia.lof'.
 
@@ -1884,18 +1886,18 @@ Package logreq Info: Writing requests to 'monografia.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47386 strings out of 474222
- 897186 string characters out of 5748733
+ 47391 strings out of 474222
+ 897276 string characters out of 5748733
  1961975 words of memory out of 5000000
- 68641 multiletter control sequences out of 15000+600000
- 667561 words of font info for 102 fonts, out of 8000000 for 9000
+ 68644 multiletter control sequences out of 15000+600000
+ 671824 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  124i,12n,121p,2436b,4454s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbo10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on monografia.pdf (56 pages, 6853588 bytes).
+</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbo10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on monografia.pdf (57 pages, 6876405 bytes).
 PDF statistics:
- 1088 PDF objects out of 1200 (max. 8388607)
- 892 compressed objects within 9 object streams
- 223 named destinations out of 1000 (max. 500000)
+ 1097 PDF objects out of 1200 (max. 8388607)
+ 898 compressed objects within 9 object streams
+ 224 named destinations out of 1000 (max. 500000)
  487 words of extra memory for PDF output out of 10000 (max. 10000000)
 

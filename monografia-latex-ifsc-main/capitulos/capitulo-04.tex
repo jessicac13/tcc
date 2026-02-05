@@ -341,7 +341,9 @@ CNN Simples & + Preproc coif4 + Aug &
 \end{table}
 
 
-\noindent \textbf{Destaques:} Os valores em \textbf{laranja} indicam o desempenho \textit{baseline},
+\begin{flushleft}
+\footnotesize
+\textbf{Destaques:} Os valores em \textbf{laranja} indicam o desempenho \textit{baseline},
 caracterizado por limitação na identificação da classe Anormal.
 Em \textbf{azul}, a \textit{data augmentation} melhora a representação da classe Anormal,
 porém com impacto negativo na acurácia global.
@@ -349,7 +351,7 @@ Os valores em \textbf{verde} indicam ganho consistente com o pré-processamento
 \textit{Coiflet}, enquanto em \textbf{roxo} destaca-se a combinação \textit{Coiflet + augmentation},
 que favorece a sensibilidade à classe Anormal, à custa de queda no desempenho da
 classe Normal.
-
+\end{flushleft}
 
 \section*{Modelo ResNet18}
 
@@ -400,7 +402,9 @@ ResNet18 & + Preproc coif4 + Aug &
 \end{table}
 
 
-\noindent \textbf{Destaques:} Os valores em \textbf{laranja} indicam o desempenho da ResNet18
+\begin{flushleft}
+\footnotesize
+\textbf{Destaques:} Os valores em \textbf{laranja} indicam o desempenho da ResNet18
 sem pré-proces- \newline samento, com limitação na identificação da classe Anormal.
 Em \textbf{azul}, a \textit{data augmentation} isolada não trouxe ganhos relevantes,
 evidenciando que a variabilidade não é eficaz sem tratamento prévio dos dados.
@@ -408,7 +412,7 @@ Os valores em \textbf{verde} indicam melhora consistente com o uso do
 pré-processamento \textit{Coiflet}, especialmente para a classe Anormal.
 Por fim, os valores em \textbf{roxo} destacam a combinação \textit{Coiflet + augmentation},
 que resulta em um dos cenários mais equilibrados entre as classes.
-
+\end{flushleft}
 
 \section*{Modelo ResNet34}
 
@@ -457,7 +461,9 @@ ResNet34 & + Preproc coif4 + Aug &
 \end{table}
 
 
-\noindent \textbf{Destaques:} Os valores em \textbf{laranja} indicam o desempenho da ResNet34
+\begin{flushleft}
+\footnotesize
+\textbf{Destaques:} Os valores em \textbf{laranja} indicam o desempenho da ResNet34
 sem pré-proces-
 \newline samento, caracterizado por forte viés em favor da classe Normal e
 limitação na identificação da classe Anormal.
@@ -468,7 +474,7 @@ Os valores em \textbf{verde} destacam o melhor cenário, no qual o pré-processa
 Por fim, os valores em \textbf{roxo} evidenciam o colapso da classe Anormal quando
 pré-processamento e \textit{data augmentation} são combinados, indicando elevada sensibilidade
 da arquitetura ao excesso de variabilidade.
-
+\end{flushleft}
 
 
 \section*{Modelo ResNet50}
@@ -517,7 +523,9 @@ ResNet50 & + Preproc coif4 + Aug &
 \end{table}
 
 
-\noindent \textbf{Destaques:} Os valores em \textbf{laranja} indicam que, sem pré-processamento,
+\begin{flushleft}
+\footnotesize
+\textbf{Destaques:} Os valores em \textbf{laranja} indicam que, sem pré-processamento,
 a ResNet50 apresenta desempenho próximo ao aleatório e forte desequilíbrio entre as
 classes. Em \textbf{azul}, a \textit{data augmentation} isolada não beneficia a classe Anormal,
 acentuando o desbalanceamento e comprometendo a generalização.
@@ -526,6 +534,7 @@ Os valores em \textbf{verde} evidenciam ganho expressivo com o pré-processament
 Por fim, os valores em \textbf{roxo} mostram que a combinação \textit{Coiflet + augmentation}
 mantém desempenho estável, indicando maior tolerância da ResNet50 à variabilidade
 quando os dados já estão previamente estruturados.
+\end{flushleft}
 
 \chapter{Conclusão }\label{Conclusão}
 

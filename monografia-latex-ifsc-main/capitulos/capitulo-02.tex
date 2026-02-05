@@ -389,7 +389,7 @@ O \textit{Transfer Learning} tem se destacado como uma abordagem eficaz para red
 A transferência de conhecimento aproveita os vetores de características gerados por redes neurais profundas já treinadas, utilizando seus pesos sinápticos configurados para reconhecer e extrair informações de conjuntos de dados anteriores. Esses vetores servem como descritores das imagens do novo conjunto e podem ser usados para treinar um novo classificador ou inseridos diretamente nas camadas totalmente conectadas da arquitetura original, após ajustes finos (\textit{fine-tuning}) nas camadas convolucionais \cite{aguiar2017}. Assim, essa estratégia tem se mostrado especialmente vantajosa em áreas como a Medicina, onde a disponibilidade de grandes volumes de dados rotulados é limitada.
 
 
-\section{Estado da arte}\label{cap:revisao}
+\chapter{Estado da arte}\label{cap:revisao}
 
 A integração entre redes neurais convolucionais (CNNs) e transformadas \textit{Wavelet} tem demonstrado eficácia significativa na análise de mamografias, especialmente para identificação de lesões sutis como microcalcificações e distorções arquiteturais \cite{blahova2025neural,oyelade2022novel}. Essa abordagem extrai características multiescala que amplificam padrões relevantes para o diagnóstico precoce do câncer de mama \cite{oyelade2022novel}.
 
@@ -403,5 +403,44 @@ Com a base de dados \textit{CBIS-DDSM}, modelos \textit{Wavelet-CNN} atingiram 8
 
 Embora Bakkour e Afdel (2017) tenham reportado 97,28\% de acurácia com aumento de dados, sua abordagem não incorporou transformadas \textit{Wavelet}, limitando a extração de características multiescala \cite{oyelade2022novel}.
 
-Assim, essa combinação entre CNNs e transformadas wavelet representa uma abordagem consolidada na análise de mamografias, evidenciando ganhos quantificáveis na detecção de lesões sutis e na redução de falsos positivos. Esses avanços estabelecem as bases para a exploração de arquiteturas otimizadas e estratégias de pré-processamento desta pesquisa.
+No contexto nacional e institucional, destaca-se a produção desenvolvida no
+Instituto Federal de Santa Catarina (IFSC) -- Campus São José, no curso de
+Tecnologia em Sistemas de Telecomunicações, em especial o estudo
+\textit{``Detecção de Tumores em Mamografia''}, de Silva (2013), que investigou
+técnicas de processamento digital de imagens aplicadas à detecção de tumores
+mamográficos, obtendo 82\% de eficiência na identificação e localização dos
+achados nas imagens avaliadas. Os resultados evidenciaram a influência direta do
+pré-processamento na qualidade da detecção, com a necessidade de equalização de
+brilho e contraste e limitações impostas pelo uso de filtros com dimensões
+fixas, especialmente diante da variabilidade de tamanho e posicionamento das
+mamas. Em comparação com abordagens baseadas em análise multiescala, o trabalho
+indica que a ausência da transformada \textit{Wavelet} pode ter contribuído para uma
+filtragem menos eficaz, reforçando o potencial dessa técnica para a remoção de
+ruídos e o realce de estruturas relevantes em imagens mamográficas.
+
+Posteriormente, o Trabalho de Conclusão de Curso
+\textit{``Realce de Achados em Mamografia''}, de Oliveira (2019), desenvolvido no
+IFSC -- Campus São José, no curso de Tecnologia em Sistemas de Telecomunicações,
+investigou técnicas de processamento digital de imagens aplicadas ao realce de
+achados em mamografias. Os resultados indicaram que a utilização da transformada
+\textit{Wavelet} apresentou desempenho satisfatório para o realce das imagens, sendo
+recomendada para detecção de bordas e remoção de ruídos. Como direcionamento
+para trabalhos futuros, o autor também sugeriu a integração do pré-processamento
+diretamente no script principal.
+
+Mais recentemente, no âmbito do curso de Engenharia de Telecomunicações do
+IFSC -- Campus São José, destaca-se o Trabalho de Conclusão de Curso
+\textit{``Detecção de nódulos em imagens de mamografia usando wavelet e
+inteligência artificial''}, de Passig e Silva (2023). O estudo avaliou
+o impacto do pré-processamento de mamografias por meio da remoção de ruído via
+transformadas \textit{Wavelet} na classificação com redes neurais convolucionais,
+identificando melhora significativa de acurácia com a família Biorthogonal,
+além de apontar as famílias \textit{Biorthogonal} e \textit{Coiflet} como promissoras para
+aplicações em mamografias. Como sugestão de trabalhos futuros, a autora
+recomendou a investigação mais aprofundada dessas famílias, motivação que
+fundamenta a adoção da família \textit{Coiflet} no presente trabalho, estabelecendo
+continuidade e alinhamento metodológico com pesquisas previamente desenvolvidas
+na mesma instituição.
+
+Assim, essa combinação entre CNNs e transformadas \textit{Wavelet} representa uma abordagem consolidada na análise de mamografias, evidenciando ganhos quantificáveis na detecção de lesões sutis e na redução de falsos positivos. Esses avanços estabelecem as bases para a exploração de arquiteturas otimizadas e estratégias de pré-processamento desta pesquisa.
 
